@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SnapscreenKit Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+
+    <a name="//apple_ref/objc/Class/SnapscreenKit" class="dashAnchor"></a>
+
+    <a title="SnapscreenKit Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          SnapscreenKit Docs
+        </a>
+         (100% documented)
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">SnapscreenKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      SnapscreenKit Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../setup-guide.html">Setup Guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenAccessToken.html">SnapscreenAccessToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenAccessTokenHolder.html">SnapscreenAccessTokenHolder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenKit.html">SnapscreenKit</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)SnapscreenNSLogLoggingHandler">SnapscreenNSLogLoggingHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenPageMetadata.html">SnapscreenPageMetadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSnapViewController.html">SnapscreenSnapViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenTvChannel.html">SnapscreenTvChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenTvSearchResult.html">SnapscreenTvSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenTvSearchResultEntry.html">SnapscreenTvSearchResultEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenWebSearchImageResult.html">SnapscreenWebSearchImageResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenWebSearchResponse.html">SnapscreenWebSearchResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenWebSearchResult.html">SnapscreenWebSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenWebSearchService.html">SnapscreenWebSearchService</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenWebSearchSiteResult.html">SnapscreenWebSearchSiteResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenWebSearchVideoResult.html">SnapscreenWebSearchVideoResult</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SnapscreenKitVersionNumber">SnapscreenKitVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SnapscreenKitVersionString">SnapscreenKitVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SnapscreenErrorCode.html">SnapscreenErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SnapscreenWebSearchResultType.html">SnapscreenWebSearchResultType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenKitDelegate.html">SnapscreenKitDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenLocationProvider.html">SnapscreenLocationProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenLoggingHandler.html">SnapscreenLoggingHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenSnapViewControllerDelegate.html">SnapscreenSnapViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>SnapscreenKit</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">SnapscreenKit</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>SnapscreenKit offers integration of the Snapscreen functions in your app. Before using, make sure to initially SnapscreenKit with the appropriate clientID and clientSecret and provide optional additional handlers.
+ *</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SnapscreenKit(cm)sharedSnapscreenKitWithClientID:clientSecret:testEnvironment:loggingHandler:locationProvider:delegate:"></a>
+                    <a name="//apple_ref/objc/Method/+sharedSnapscreenKitWithClientID:clientSecret:testEnvironment:loggingHandler:locationProvider:delegate:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenKit(cm)sharedSnapscreenKitWithClientID:clientSecret:testEnvironment:loggingHandler:locationProvider:delegate:">+sharedSnapscreenKitWithClientID:clientSecret:testEnvironment:loggingHandler:locationProvider:delegate:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize SnapscreenKit</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span>
+<span class="nf">sharedSnapscreenKitWithClientID</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">clientID</span>
+                   <span class="nf">clientSecret</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">clientSecret</span>
+                <span class="nf">testEnvironment</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">connectToTestEnvironment</span>
+                 <span class="nf">loggingHandler</span><span class="p">:</span>
+                     <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenLoggingHandler.html">SnapscreenLoggingHandler</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">loggingHandler</span>
+               <span class="nf">locationProvider</span><span class="p">:</span>
+                   <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenLocationProvider.html">SnapscreenLocationProvider</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">locationProvider</span>
+                       <span class="nf">delegate</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenKitDelegate.html">SnapscreenKitDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">delegate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">sharedSnapscreenKitWithClientID</span><span class="p">(</span><span class="nv">clientID</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">,</span> <span class="nv">clientSecret</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">,</span> <span class="n">testEnvironment</span> <span class="nv">connectToTestEnvironment</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">,</span> <span class="nv">loggingHandler</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?,</span> <span class="nv">locationProvider</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?,</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SnapscreenKitDelegate.html">SnapscreenKitDelegate</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clientID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The client ID of your application - provided by Snapscreen</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clientSecret</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The client secret of your application - provided by Snapscreen</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>connectToTestEnvironment</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether you want SnapscreenKit connect to the test environment of Snapscreen. Pass NO for production use in Release Builds.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>loggingHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An optional logging handler. Pass if you want to receive log messages from SnapscreenKit in your application and attach them to your custom logging solution. For logging to NSLog there is a default implementation in SnapscreenNSLogLoggingHandler</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>locationProvider</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An optional location provider. If your application determines the user&rsquo;s location in some way, provide this and SnapscreenKit will also use the user&rsquo;s location to improve result quality.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delegate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The SnapscreenKit delegate</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SnapscreenKit(cm)sharedSnapscreenKitWithClientID:clientSecret:testEnvironment:loggingHandler:locationProvider:delegate:customTokenHandling:"></a>
+                    <a name="//apple_ref/objc/Method/+sharedSnapscreenKitWithClientID:clientSecret:testEnvironment:loggingHandler:locationProvider:delegate:customTokenHandling:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenKit(cm)sharedSnapscreenKitWithClientID:clientSecret:testEnvironment:loggingHandler:locationProvider:delegate:customTokenHandling:">+sharedSnapscreenKitWithClientID:clientSecret:testEnvironment:loggingHandler:locationProvider:delegate:customTokenHandling:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize SnapscreenKit and optionally tell the SDK to skip the automatic token handling. Note: This should never be necessary by SDK users!</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span>
+<span class="nf">sharedSnapscreenKitWithClientID</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">clientID</span>
+                   <span class="nf">clientSecret</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">clientSecret</span>
+                <span class="nf">testEnvironment</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">connectToTestEnvironment</span>
+                 <span class="nf">loggingHandler</span><span class="p">:</span>
+                     <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenLoggingHandler.html">SnapscreenLoggingHandler</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">loggingHandler</span>
+               <span class="nf">locationProvider</span><span class="p">:</span>
+                   <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenLocationProvider.html">SnapscreenLocationProvider</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">locationProvider</span>
+                       <span class="nf">delegate</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenKitDelegate.html">SnapscreenKitDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">delegate</span>
+            <span class="nf">customTokenHandling</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">customTokenHandling</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">sharedSnapscreenKitWithClientID</span><span class="p">(</span><span class="nv">clientID</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">,</span> <span class="nv">clientSecret</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">,</span> <span class="n">testEnvironment</span> <span class="nv">connectToTestEnvironment</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">,</span> <span class="nv">loggingHandler</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?,</span> <span class="nv">locationProvider</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?,</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SnapscreenKitDelegate.html">SnapscreenKitDelegate</a></span><span class="p">?,</span> <span class="nv">customTokenHandling</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clientID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The client ID of your application - provided by Snapscreen</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clientSecret</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The client secret of your application - provided by Snapscreen</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>connectToTestEnvironment</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether you want SnapscreenKit connect to the test environment of Snapscreen. Pass NO for production use in Release Builds.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>loggingHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An optional logging handler. Pass if you want to receive log messages from SnapscreenKit in your application and attach them to your custom logging solution. For logging to NSLog there is a default implementation in SnapscreenNSLogLoggingHandler</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>locationProvider</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An optional location provider. If your application determines the user&rsquo;s location in some way, provide this and SnapscreenKit will also use the user&rsquo;s location to improve result quality.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delegate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The SnapscreenKit delegate</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>customTokenHandling</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>whether Snapscreenkit should perform automatic token handling. If no, the application itself is fully responsible for getting an access token, refreshing it and always keeping it up to date in the accessTokenHolder</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SnapscreenKit(cm)sharedSnapscreenKit"></a>
+                    <a name="//apple_ref/objc/Method/+sharedSnapscreenKit" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenKit(cm)sharedSnapscreenKit">+sharedSnapscreenKit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Easily access SnapscreenKit once it was initialized before in your application.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nullable</span><span class="p">)</span><span class="n">sharedSnapscreenKit</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">sharedSnapscreenKit</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SnapscreenKit(im)instantiateSnapscreenSnapViewControllerWithDelegate:"></a>
+                    <a name="//apple_ref/objc/Method/-instantiateSnapscreenSnapViewControllerWithDelegate:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenKit(im)instantiateSnapscreenSnapViewControllerWithDelegate:">-instantiateSnapscreenSnapViewControllerWithDelegate:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a UIViewController for performing Snaps of Live TV. Should be presented as a modal UIViewController in your application for best experience.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/SnapscreenSnapViewController.html">SnapscreenSnapViewController</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span>
+<span class="nf">instantiateSnapscreenSnapViewControllerWithDelegate</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenSnapViewControllerDelegate.html">SnapscreenSnapViewControllerDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">delegate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">instantiateSnapscreenSnapViewControllerWithDelegate</span><span class="p">(</span><span class="nv">delegate</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyObject</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delegate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The delegate for the view controller that receives callbacks during the snapping process.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>SnapscreenSnapViewController A fully configured view controller for performing a snap. Returns null if you did not initialize SnapscreenKit correctly or an authentication error occured during initialization.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SnapscreenKit(py)delegate"></a>
+                    <a name="//apple_ref/objc/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenKit(py)delegate">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Optional delegate if you want to receive callbacks from SnapscreenKit.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenKitDelegate.html">SnapscreenKitDelegate</a></span><span class="o">&gt;</span> <span class="n">delegate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SnapscreenKitDelegate.html">SnapscreenKitDelegate</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SnapscreenKit(py)countryCode"></a>
+                    <a name="//apple_ref/objc/Property/countryCode" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenKit(py)countryCode">countryCode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The country code the user is in. Affects the results that are found when snapping. Defaults to AT.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">countryCode</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SnapscreenKit(py)localeIdentifier"></a>
+                    <a name="//apple_ref/objc/Property/localeIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenKit(py)localeIdentifier">localeIdentifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The locale identifier for the user. Affects the web search results that are found and how they are returned. Defaults to de_AT.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">localeIdentifier</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SnapscreenKit(py)currentSnapscreenTimestamp"></a>
+                    <a name="//apple_ref/objc/Property/currentSnapscreenTimestamp" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenKit(py)currentSnapscreenTimestamp">currentSnapscreenTimestamp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A synchronized timestamp representing &lsquo;now&rsquo; - use this if you need a current timestamp for other SnapscreenKit calls and don&rsquo;t want or can&rsquo;t use a SnapscreenTvSearchResultEntry.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">currentSnapscreenTimestamp</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">currentSnapscreenTimestamp</span><span class="p">:</span> <span class="kt">Int64</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SnapscreenKit(py)webSearchService"></a>
+                    <a name="//apple_ref/objc/Property/webSearchService" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenKit(py)webSearchService">webSearchService</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Service for performing web searches based on snap results</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SnapscreenWebSearchService.html">SnapscreenWebSearchService</a></span> <span class="o">*</span><span class="n">webSearchService</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">webSearchService</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SnapscreenKit(py)loggingHandler"></a>
+                    <a name="//apple_ref/objc/Property/loggingHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenKit(py)loggingHandler">loggingHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Holds the logging handler that was provided when initializing SnapscreenKit.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenLoggingHandler.html">SnapscreenLoggingHandler</a></span><span class="o">&gt;</span> <span class="n">loggingHandler</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">loggingHandler</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SnapscreenKit(py)locationProvider"></a>
+                    <a name="//apple_ref/objc/Property/locationProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenKit(py)locationProvider">locationProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Holds the location provider that was provided when initializing SnapscreenKit.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenLocationProvider.html">SnapscreenLocationProvider</a></span><span class="o">&gt;</span> <span class="n">locationProvider</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">locationProvider</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SnapscreenKit(py)accessTokenHolder"></a>
+                    <a name="//apple_ref/objc/Property/accessTokenHolder" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenKit(py)accessTokenHolder">accessTokenHolder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Container which holds the current access token of SnapscreenKit.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SnapscreenAccessTokenHolder.html">SnapscreenAccessTokenHolder</a></span> <span class="o">*</span><span class="n">accessTokenHolder</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SnapscreenKit(py)performsAutomaticTokenHandling"></a>
+                    <a name="//apple_ref/objc/Property/performsAutomaticTokenHandling" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenKit(py)performsAutomaticTokenHandling">performsAutomaticTokenHandling</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether SnapscreenKit performs automatic token handling (corresponds to the value passed in the initializer)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">performsAutomaticTokenHandling</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">performsAutomaticTokenHandling</span><span class="p">:</span> <span class="kt">Int32</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2016 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2016-10-19)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
