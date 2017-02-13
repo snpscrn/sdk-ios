@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SnapscreenSearchResultEntry.h"
 
 @class SnapscreenTvChannel;
 
@@ -15,7 +16,7 @@
  A single result entry from a tv search. This represents an individual program on a single channel at a certain point in time.
  
  */
-@interface SnapscreenTvSearchResultEntry : NSObject
+@interface SnapscreenTvSearchResultEntry : SnapscreenSearchResultEntry
 
 /** The TV channel this result is associated to */
 @property (readonly, nonatomic, nonnull) SnapscreenTvChannel* channel;

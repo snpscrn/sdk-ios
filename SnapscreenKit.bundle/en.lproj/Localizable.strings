@@ -15,5 +15,6 @@
 "Snapscreen_Snapping_No_results" = "We’re sorry, your Snap returned no results - either the channel you are watching is not supported or a TV screen could not be detected.";
 "Snapscreen_Snapping_Progress_Stage_Detecting_TV" = "Looking for TV ...";
 "Snapscreen_Snapping_Progress_Stage_Calculating_Fingerprint" = "Calculating ...";
+"Snapscreen_Snapping_Progress_Stage_Sending_Fingerprint" = "Sending information ...";
 "Snapscreen_Snapping_Progress_Stage_Waiting_For_Response" = "Getting results ...";
 "Snapscreen_Snapping_Progress_Stage_Done" = "Ready";

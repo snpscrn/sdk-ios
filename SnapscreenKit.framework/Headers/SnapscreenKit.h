@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <SnapscreenKit/SnapscreenAccessToken.h>
 #import <SnapscreenKit/SnapscreenAccessTokenHolder.h>
+#import <SnapscreenKit/SnapscreenSearchResult.h>
 #import <SnapscreenKit/SnapscreenTvSearchResult.h>
 #import <SnapscreenKit/SnapscreenTvSearchResultEntry.h>
+#import <SnapscreenKit/SnapscreenAdvertisementSearchResult.h>
+#import <SnapscreenKit/SnapscreenAdvertisementSearchResultEntry.h>
+#import <SnapscreenKit/SnapscreenAdvertisement.h>
 #import <SnapscreenKit/SnapscreenTvChannel.h>
 #import <SnapscreenKit/SnapscreenPageMetadata.h>
 #import <SnapscreenKit/SnapscreenWebSearchResponse.h>
@@ -24,6 +28,7 @@
 #import <SnapscreenKit/SnapscreenLocationProvider.h>
 #import <SnapscreenKit/SnapscreenLoggingHandler.h>
 #import <SnapscreenKit/SnapscreenNSLogLoggingHandler.h>
+#import <SnapscreenKit/SnapscreenSnapConfiguration.h>
 
 /// Project version number for SnapscreenKit.
 FOUNDATION_EXPORT double SnapscreenKitVersionNumber;
@@ -89,11 +94,12 @@ SnapscreenKit offers integration of the Snapscreen functions in your app. Before
  Initializes a UIViewController for performing Snaps of Live TV. Should be presented as a modal UIViewController in your application for best experience.
  
  @param delegate The delegate for the view controller that receives callbacks during the snapping process.
- 
+ @param snapConfiguration The configuration for the snap
+
  @return SnapscreenSnapViewController A fully configured view controller for performing a snap. Returns null if you did not initialize SnapscreenKit correctly or an authentication error occured during initialization.
  
  */
-- (SnapscreenSnapViewController* _Nullable) instantiateSnapscreenSnapViewControllerWithDelegate: (id<SnapscreenSnapViewControllerDelegate> _Nonnull) delegate;
+- (SnapscreenSnapViewController* _Nullable) instantiateSnapscreenSnapViewControllerWithDelegate: (id<SnapscreenSnapViewControllerDelegate> _Nonnull) delegate configuration: (SnapscreenSnapConfiguration* _Nonnull) snapConfiguration;
 
 /**
  

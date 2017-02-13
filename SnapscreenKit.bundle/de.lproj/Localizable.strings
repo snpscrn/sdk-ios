@@ -14,5 +14,6 @@
 "Snapscreen_Snapping_No_results" = "Leider wurden keine Resultate gefunden - entweder der Sender, den sie gerade ansehen, wird nicht unterstützt oder ein TV-Bild wurde nicht erkannt.";
 "Snapscreen_Snapping_Progress_Stage_Detecting_TV" = "Suche nach TV ...";
 "Snapscreen_Snapping_Progress_Stage_Calculating_Fingerprint" = "Berechne ...";
+"Snapscreen_Snapping_Progress_Stage_Sending_Fingerprint" = "Sende Informationen ...";
 "Snapscreen_Snapping_Progress_Stage_Waiting_For_Response" = "Warte auf Resultate ...";
 "Snapscreen_Snapping_Progress_Stage_Done" = "Bereit";

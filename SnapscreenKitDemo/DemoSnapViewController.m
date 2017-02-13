@@ -20,17 +20,34 @@
     self.statusLabel.text = @"Start a new snap";
 }
 
-- (IBAction) startNewSnap:(id)sender {
-    SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self];
+- (IBAction) startNewTvSnap:(id)sender {
+    SnapscreenSnapConfiguration* configuration = [SnapscreenSnapConfiguration new];
+    configuration.searchForTvResults = YES;
+    
+    SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self configuration: configuration];
     [self presentViewController: [[UINavigationController alloc] initWithRootViewController: snapViewController] animated: YES completion: nil];
 }
 
-- (void) snapscreenSnapViewController: (SnapscreenSnapViewController* _Nonnull) snapViewController didSnapResult: (SnapscreenTvSearchResult* _Nonnull) snapResult {
+- (IBAction) startNewAdSnap:(id)sender {
+    SnapscreenSnapConfiguration* configuration = [SnapscreenSnapConfiguration new];
+    configuration.searchForAdvertisements = YES;
+    
+    SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self configuration: configuration];
+    [self presentViewController: [[UINavigationController alloc] initWithRootViewController: snapViewController] animated: YES completion: nil];
+}
+
+- (void) snapscreenSnapViewController: (SnapscreenSnapViewController* _Nonnull) snapViewController didSnapResult: (SnapscreenSearchResult* _Nonnull) snapResult {
     [snapViewController dismissViewControllerAnimated: YES completion: nil];
     NSMutableArray* resultTextArray = [NSMutableArray new];
     [resultTextArray addObject: @"Results found:"];
-    for (SnapscreenTvSearchResultEntry* resultEntry in snapResult.resultEntries) {
-        [resultTextArray addObject: [NSString stringWithFormat: @"Channel: %@; Name: %@, Timestamp: %@", resultEntry.channel.channelCode, resultEntry.channel.name, @(resultEntry.timestamp)]];
+    if (snapResult.tvSearchResult) {
+        for (SnapscreenTvSearchResultEntry* resultEntry in snapResult.tvSearchResult.results) {
+            [resultTextArray addObject: [NSString stringWithFormat: @"Channel: %@; Name: %@, Timestamp: %@", resultEntry.channel.channelCode, resultEntry.channel.name, @(resultEntry.timestamp)]];
+        }
+    } else if (snapResult.advertisementSearchResult) {
+        for (SnapscreenAdvertisementSearchResultEntry* resultEntry in snapResult.advertisementSearchResult.results) {
+            [resultTextArray addObject: [NSString stringWithFormat: @"Ad Title: %@; Timestamp: %@", resultEntry.advertisement.advertisementTitle, @(resultEntry.timestamp)]];
+        }
     }
     self.statusLabel.text = [resultTextArray componentsJoinedByString: @"\n"];
 }

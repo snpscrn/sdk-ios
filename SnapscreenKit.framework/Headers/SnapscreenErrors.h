@@ -19,5 +19,7 @@ typedef NS_ENUM(NSInteger, SnapscreenErrorCode) {
     /// The resource bundle (SnapscreenKit.bundle) is missing from the application bundle
     SnapscreenResourceBundleMissing,
     /// An error occured while loading webresources
-    SnapscreenWebSearchError
+    SnapscreenWebSearchError,
+    /// Web search resulted in no results
+    SnapscreenWebSearchNoResults
 };

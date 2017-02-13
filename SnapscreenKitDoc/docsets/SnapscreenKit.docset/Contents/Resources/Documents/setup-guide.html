@@ -52,6 +52,15 @@
                 <a class="nav-group-task-link" href="Classes/SnapscreenAccessTokenHolder.html">SnapscreenAccessTokenHolder</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SnapscreenAdvertisement.html">SnapscreenAdvertisement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SnapscreenAdvertisementSearchResult.html">SnapscreenAdvertisementSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SnapscreenAdvertisementSearchResultEntry.html">SnapscreenAdvertisementSearchResultEntry</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/SnapscreenKit.html">SnapscreenKit</a>
               </li>
               <li class="nav-group-task">
@@ -59,6 +68,15 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/SnapscreenPageMetadata.html">SnapscreenPageMetadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SnapscreenSearchResult.html">SnapscreenSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)SnapscreenSearchResultEntry">SnapscreenSearchResultEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SnapscreenSnapConfiguration.html">SnapscreenSnapConfiguration</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/SnapscreenSnapViewController.html">SnapscreenSnapViewController</a>
@@ -141,18 +159,25 @@
             <a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='requirements'>Requirements</h2>
 
 <p>SnapscreenKit requires at least iOS 8.</p>
-<a href='#setup' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='setup'>Setup</h2>
+<a href='#integrating-snapscreenkit' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='integrating-snapscreenkit'>Integrating SnapscreenKit</h2>
+<a href='#via-cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='via-cocoapods'>via CocoaPods</h3>
+
+<p>Integration via Cocoapods is the easiest way to use SnapscreenKit. Just add the following line to your Podfile.</p>
+<pre class="highlight plaintext"><code>pod 'SnapscreenKit', :git =&gt; 'https://github.com/snpscrn/sdk-ios.git'
+</code></pre>
+<a href='#manual-integration' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='manual-integration'>Manual Integration</h3>
 
 <p>SnapscreenKit is provided as an iOS framework and bundles everything necessary for it to operate.</p>
-<a href='#add-the-snapscreenkit-framework' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='add-the-snapscreenkit-framework'>Add the SnapscreenKit framework</h3>
+<a href='#add-the-snapscreenkit-framework' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='add-the-snapscreenkit-framework'>Add the SnapscreenKit framework</h4>
 
 <p>Drag the SnapscreenKit framework to your iOS project and add it as an <strong>Embedded Framework</strong> in your Build Phase (if not done automatically by Xcode).</p>
-<a href='#add-the-snapscreenkit-resource-bundle' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='add-the-snapscreenkit-resource-bundle'>Add the SnapscreenKit Resource bundle</h3>
+<a href='#add-the-snapscreenkit-resource-bundle' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='add-the-snapscreenkit-resource-bundle'>Add the SnapscreenKit Resource bundle</h4>
 
 <p>Drag SnapscreenKit.bundle to your iOS project to include the necessary resources for SnapscreenKit. If you want to change localizations in SnapscreenKit, you can modify the Localizable.strings files in this bundle.</p>
-<a href='#add-linker-flags' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='add-linker-flags'>Add linker flags</h3>
+<a href='#add-linker-flags' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='add-linker-flags'>Add linker flags</h4>
 
 <p>Add the flags <strong>-lc++</strong> and <strong>-ObjC</strong> to the <em>&lsquo;Other Linker Flags&rsquo;</em> in your projects <em>Build Settings</em>.</p>
+<a href='#using-snapscreenkit' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='using-snapscreenkit'>Using SnapscreenKit</h2>
 <a href='#obtain-a-client-id-and-secret' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='obtain-a-client-id-and-secret'>Obtain a client ID and secret</h3>
 
 <p>Contact Snapscreen to get a clientID and secret for your application.</p>
@@ -180,19 +205,34 @@
 <p>For convenience the framework is a so-called <q>fat</q> binary that contains slices for simulator and device architectures. As there is an issue in Xcode that does not correctly strip the unnecessary architectures from a framework you might run into issues when trying to submit your application to the App Store with the framework containing the simulator architecture. To work around this, we recommend to include the following shell script (provided by the Realm project) as a Build Phase in your project to strip the unnecessary slices from your application. </p>
 
 <p><a href="https://github.com/realm/realm-cocoa/blob/d59c86f11525f346c8e8db277fdbf2d9ff990d98/scripts/strip-frameworks.sh">https://github.com/realm/realm-cocoa/blob/d59c86f11525f346c8e8db277fdbf2d9ff990d98/scripts/strip-frameworks.sh</a></p>
-<a href='#snapping' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='snapping'>Snapping</h2>
+<a href='#snapping-tv-content' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='snapping-tv-content'>Snapping TV content</h2>
 
-<p>In order to snap a TV image via SnapscreenKit, you need to first retrieve a SnapscreenSnapViewController by calling</p>
-<pre class="highlight plaintext"><code>SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self];
+<p>In order to snap a TV image and search for TV channels via SnapscreenKit, you need to first retrieve a SnapscreenSnapViewController by calling</p>
+<pre class="highlight plaintext"><code>SnapscreenSnapConfiguration* configuration = [SnapscreenSnapConfiguration new];
+configuration.searchForTvResults = YES;
+
+SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self configuration: configuration];
 </code></pre>
-
-<p>If you want, you can customize several messages that are shown in the UI via the corresponding properties.</p>
 
 <p>Once you have retrieved the view controller, it&rsquo;s best to present it modally inside a UINavigationController:</p>
 <pre class="highlight plaintext"><code>[self presentViewController: [[UINavigationController alloc] initWithRootViewController: snapViewController] animated: YES completion: nil];
 </code></pre>
 
-<p>The SnapscreenSnapViewController will send callbacks to the delegate you pass and you are responsible for dismissing the ViewController once it&rsquo;s no longer needed. The ViewController does not dismiss itself in any situation.</p>
+<p>The SnapscreenSnapViewController will send callbacks to the delegate you pass and you are responsible for dismissing the ViewController once it&rsquo;s no longer needed. The ViewController does not dismiss itself in any situation. The <strong>SnapscreenSearchResult</strong> you receive from the delegate callback will have the tvSearchResult set when the search is successful.</p>
+<a href='#snapping-advertising-content' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='snapping-advertising-content'>Snapping Advertising content</h2>
+
+<p>In order to snap a TV image and search for Advertisements via SnapscreenKit, you need to first retrieve a SnapscreenSnapViewController by calling</p>
+<pre class="highlight plaintext"><code>SnapscreenSnapConfiguration* configuration = [SnapscreenSnapConfiguration new];
+configuration.searchForAdvertisements = YES;
+
+SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self configuration: configuration];
+</code></pre>
+
+<p>Once you have retrieved the view controller, it&rsquo;s best to present it modally inside a UINavigationController:</p>
+<pre class="highlight plaintext"><code>[self presentViewController: [[UINavigationController alloc] initWithRootViewController: snapViewController] animated: YES completion: nil];
+</code></pre>
+
+<p>The SnapscreenSnapViewController will send callbacks to the delegate you pass and you are responsible for dismissing the ViewController once it&rsquo;s no longer needed. The ViewController does not dismiss itself in any situation.  The <strong>SnapscreenSearchResult</strong> you receive from the delegate callback will have the advertisementSearchResult set when the search is successful.</p>
 <a href='#web-search' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='web-search'>Web Search</h2>
 
 <p>In order to perform a web search, you simply call the corresponding method for the result type you want to get on the SnapscreenWebSearchService that you can retrieve from SnapscreenKit:</p>
@@ -205,6 +245,18 @@
 <a href='#displaying-web-search-results' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='displaying-web-search-results'>Displaying Web Search Results</h2>
 
 <p>When you are displaying a web search result, you need to use the <strong>visitURL</strong> of the corresponding SnapscreenWebSearchResult to resolve the actual result page and also have Snapscreen track the visit to this result. This is necessary to correctly provide feedback to Snapscreen in order to provide ranking and priorization for the web results.</p>
+<a href='#localization' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='localization'>Localization</h2>
+
+<p>If you want, you can customize several messages that are shown in the UI by overriding the Localization keys defined in SnapscreenKit.bundle in your own Localizable.strings files.</p>
+<a href='#customizing-appearance' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='customizing-appearance'>Customizing Appearance</h2>
+
+<p>The SnapscreenSnapViewController supports customization of the following properties:</p>
+
+<ul>
+<li><strong>UINavigationBar</strong> and <strong>UIBarButtonItem</strong> can be customized via the UIAppearace APIs</li>
+<li>The color of the view finder can be customized by setting the <strong>tintColor</strong> of SnapscreenSnapViewController</li>
+<li>The image for the snap button can be customized by setting the <em>snapButtonImage</em>* of SnapscreenSnapViewController</li>
+</ul>
 
           </div>
         </section>
@@ -213,7 +265,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2016 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2016-10-19)</p>
+      <p>&copy; 2017 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2017-02-13)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

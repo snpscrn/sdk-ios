@@ -15,5 +15,6 @@
 "Snapscreen_Snapping_No_results" = "Мы извиняемся, но ничего не найдено. Либо канал, который Вы смотрите, не поддерживается Snapscreen, либо не удалось обнаружить экран Вашего телевизора.";
 "Snapscreen_Snapping_Progress_Stage_Detecting_TV" = "Поиск программы...";
 "Snapscreen_Snapping_Progress_Stage_Calculating_Fingerprint" = "Вычисление...";
+"Snapscreen_Snapping_Progress_Stage_Sending_Fingerprint" = "Отправка информации...";
 "Snapscreen_Snapping_Progress_Stage_Waiting_For_Response" = "Получение результата...";
 "Snapscreen_Snapping_Progress_Stage_Done" = "Готово";

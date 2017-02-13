@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class SnapscreenSnapViewController, SnapscreenTvSearchResult;
+@class SnapscreenSnapViewController, SnapscreenSearchResult;
 
 /**
 
@@ -25,7 +25,7 @@
  @param snapResult The result of the snap. Contains at least one result entry.
  
  */
-- (void) snapscreenSnapViewController: (SnapscreenSnapViewController* _Nonnull) snapViewController didSnapResult: (SnapscreenTvSearchResult* _Nonnull) snapResult;
+- (void) snapscreenSnapViewController: (SnapscreenSnapViewController* _Nonnull) snapViewController didSnapResult: (SnapscreenSearchResult* _Nonnull) snapResult;
 
 /**
  
@@ -63,10 +63,19 @@
  
  Use the delegate callbacks to get information about the snapping process. In any case you are responsible to dismiss the view controller again.
  
+ To customize the appearance of the viewfinder, zoom level indicator and snap button, set the tintColor or the snapButtonImage accordingly. To customize the color of the navigation bar and it's
+ bar items use the default UIAppearance API calls.   
+ 
  */
 @interface SnapscreenSnapViewController : UIViewController
 
 /** The delegate of the view controller. Never should be nil, because the delegate is responsible for dismissing the view. */
 @property (weak, nullable) id<SnapscreenSnapViewControllerDelegate> delegate;
+
+/** The tint color to apply to the view finder and zoom level indicator. Defauts to the snapscreen corporate blue. **/
+@property (nonatomic, nullable, strong) UIColor* tintColor;
+
+/** The image to use as the snap button. Defaults to a standard camera icon in snapscreen corporate blue. **/
+@property (nonatomic, nullable, strong) UIImage* snapButtonImage;
 
 @end

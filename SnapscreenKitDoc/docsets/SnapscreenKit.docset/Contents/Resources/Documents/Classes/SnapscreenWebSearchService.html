@@ -53,6 +53,15 @@
                 <a class="nav-group-task-link" href="../Classes/SnapscreenAccessTokenHolder.html">SnapscreenAccessTokenHolder</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenAdvertisement.html">SnapscreenAdvertisement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenAdvertisementSearchResult.html">SnapscreenAdvertisementSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenAdvertisementSearchResultEntry.html">SnapscreenAdvertisementSearchResultEntry</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/SnapscreenKit.html">SnapscreenKit</a>
               </li>
               <li class="nav-group-task">
@@ -60,6 +69,15 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/SnapscreenPageMetadata.html">SnapscreenPageMetadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSearchResult.html">SnapscreenSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)SnapscreenSearchResultEntry">SnapscreenSearchResultEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSnapConfiguration.html">SnapscreenSnapConfiguration</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/SnapscreenSnapViewController.html">SnapscreenSnapViewController</a>
@@ -191,7 +209,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">searchSitesForSnapscreenTvChannelCode</span><span class="p">(</span><span class="nv">tvChannelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">timestamp</span> <span class="nv">timestampRef</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="p">(</span><span class="kt"><a href="../Classes/SnapscreenWebSearchResponse.html">SnapscreenWebSearchResponse</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">searchSites</span><span class="p">(</span><span class="n">forSnapscreenTvChannelCode</span> <span class="nv">tvChannelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">timestamp</span> <span class="nv">timestampRef</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/SnapscreenWebSearchResponse.html">SnapscreenWebSearchResponse</a></span></code></pre>
 
                         </div>
                       </div>
@@ -318,7 +336,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">searchImagesForSnapscreenTvChannelCode</span><span class="p">(</span><span class="nv">tvChannelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">timestamp</span> <span class="nv">timestampRef</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="p">(</span><span class="kt"><a href="../Classes/SnapscreenWebSearchResponse.html">SnapscreenWebSearchResponse</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">searchImages</span><span class="p">(</span><span class="n">forSnapscreenTvChannelCode</span> <span class="nv">tvChannelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">timestamp</span> <span class="nv">timestampRef</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/SnapscreenWebSearchResponse.html">SnapscreenWebSearchResponse</a></span></code></pre>
 
                         </div>
                       </div>
@@ -445,7 +463,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">searchVideosForSnapscreenTvChannelCode</span><span class="p">(</span><span class="nv">tvChannelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">timestamp</span> <span class="nv">timestampRef</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="p">(</span><span class="kt"><a href="../Classes/SnapscreenWebSearchResponse.html">SnapscreenWebSearchResponse</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">searchVideos</span><span class="p">(</span><span class="n">forSnapscreenTvChannelCode</span> <span class="nv">tvChannelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">timestamp</span> <span class="nv">timestampRef</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/SnapscreenWebSearchResponse.html">SnapscreenWebSearchResponse</a></span></code></pre>
 
                         </div>
                       </div>
@@ -545,7 +563,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2016 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2016-10-19)</p>
+      <p>&copy; 2017 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2017-02-13)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
