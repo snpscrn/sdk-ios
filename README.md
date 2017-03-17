@@ -88,6 +88,25 @@ Once you have retrieved the view controller, it's best to present it modally ins
 
 The SnapscreenSnapViewController will send callbacks to the delegate you pass and you are responsible for dismissing the ViewController once it's no longer needed. The ViewController does not dismiss itself in any situation. The **SnapscreenSearchResult** you receive from the delegate callback will have the tvSearchResult set when the search is successful.
 
+## Snapping Sports content
+
+In order to snap a TV image and search for Sports content via SnapscreenKit, you need to first retrieve a SnapscreenSnapViewController by calling
+
+```
+SnapscreenSnapConfiguration* configuration = [SnapscreenSnapConfiguration new];
+configuration.searchForSportsMatches = YES;
+
+SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self configuration: configuration];
+```
+
+Once you have retrieved the view controller, it's best to present it modally inside a UINavigationController:
+
+```
+[self presentViewController: [[UINavigationController alloc] initWithRootViewController: snapViewController] animated: YES completion: nil];
+```
+
+The SnapscreenSnapViewController will send callbacks to the delegate you pass and you are responsible for dismissing the ViewController once it's no longer needed. The ViewController does not dismiss itself in any situation. The **SnapscreenSearchResult** you receive from the delegate callback will have the sportsMatchResult set when the search is successful.
+
 ## Snapping Advertising content
 
 In order to snap a TV image and search for Advertisements via SnapscreenKit, you need to first retrieve a SnapscreenSnapViewController by calling
