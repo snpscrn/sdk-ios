@@ -9,26 +9,38 @@
 #import <UIKit/UIKit.h>
 #import <SnapscreenKit/SnapscreenAccessToken.h>
 #import <SnapscreenKit/SnapscreenAccessTokenHolder.h>
+#import <SnapscreenKit/SnapscreenErrors.h>
+#import <SnapscreenKit/SnapscreenLocationProvider.h>
+#import <SnapscreenKit/SnapscreenLoggingHandler.h>
+#import <SnapscreenKit/SnapscreenNSLogLoggingHandler.h>
+#import <SnapscreenKit/SnapscreenCustomerConfiguration.h>
+
+#import <SnapscreenKit/SnapscreenSnapViewController.h>
+#import <SnapscreenKit/SnapscreenSnapConfiguration.h>
+
 #import <SnapscreenKit/SnapscreenSearchResult.h>
 #import <SnapscreenKit/SnapscreenTvSearchResult.h>
 #import <SnapscreenKit/SnapscreenTvSearchResultEntry.h>
+#import <SnapscreenKit/SnapscreenTvChannel.h>
+
 #import <SnapscreenKit/SnapscreenAdvertisementSearchResult.h>
 #import <SnapscreenKit/SnapscreenAdvertisementSearchResultEntry.h>
 #import <SnapscreenKit/SnapscreenAdvertisement.h>
-#import <SnapscreenKit/SnapscreenTvChannel.h>
+
+#import <SnapscreenKit/SnapscreenSportsMatchSearchResult.h>
+#import <SnapscreenKit/SnapscreenSportsMatchSearchResultEntry.h>
+#import <SnapscreenKit/SnapscreenSportsMatch.h>
+#import <SnapscreenKit/SnapscreenSportsCompetitors.h>
+#import <SnapscreenKit/SnapscreenSportsPlayer.h>
+
+#import <SnapscreenKit/SnapscreenWebSearchService.h>
 #import <SnapscreenKit/SnapscreenPageMetadata.h>
 #import <SnapscreenKit/SnapscreenWebSearchResponse.h>
 #import <SnapscreenKit/SnapscreenWebSearchResult.h>
 #import <SnapscreenKit/SnapscreenWebSearchSiteResult.h>
 #import <SnapscreenKit/SnapscreenWebSearchImageResult.h>
 #import <SnapscreenKit/SnapscreenWebSearchVideoResult.h>
-#import <SnapscreenKit/SnapscreenSnapViewController.h>
-#import <SnapscreenKit/SnapscreenWebSearchService.h>
-#import <SnapscreenKit/SnapscreenErrors.h>
-#import <SnapscreenKit/SnapscreenLocationProvider.h>
-#import <SnapscreenKit/SnapscreenLoggingHandler.h>
-#import <SnapscreenKit/SnapscreenNSLogLoggingHandler.h>
-#import <SnapscreenKit/SnapscreenSnapConfiguration.h>
+
 
 /// Project version number for SnapscreenKit.
 FOUNDATION_EXPORT double SnapscreenKitVersionNumber;
@@ -165,6 +177,13 @@ SnapscreenKit offers integration of the Snapscreen functions in your app. Before
 
  */
 @property (readonly, nonatomic) BOOL performsAutomaticTokenHandling;
+
+/**
+ 
+ The current customer configuration - mainly for internal use
+ 
+ */
+@property (readonly, strong, nonatomic, nullable) SnapscreenCustomerConfiguration* customerConfiguration;
 
 @end
 

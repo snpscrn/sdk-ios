@@ -21,6 +21,9 @@
 /** Search for advertisements of type SnapscreenAdvertisementResult */
 @property (nonatomic, assign) BOOL searchForAdvertisements;
 
+/** Search for sports match results */
+@property (nonatomic, assign) BOOL searchForSportsMatches;
+
 /** Perform automatic snapping (provided that the specified result types support autosnapping */
 @property (nonatomic, assign) BOOL automaticSnap;
 
