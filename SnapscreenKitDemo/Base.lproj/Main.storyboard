@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -90,11 +91,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Iv-A8-nna">
-                        <barButtonItem key="leftBarButtonItem" title="Ad Snap" id="54t-1u-aPw">
-                            <connections>
-                                <action selector="startNewAdSnap:" destination="fYn-Wa-w3D" id="f4f-Gs-KhD"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Ad Snap" id="54t-1u-aPw">
+                                <connections>
+                                    <action selector="startNewAdSnap:" destination="fYn-Wa-w3D" id="f4f-Gs-KhD"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Sport Event Snap" id="TbA-e0-np1">
+                                <connections>
+                                    <action selector="startNewSportEventMatch:" destination="fYn-Wa-w3D" id="MJ8-8p-j2J"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Tv Snap" id="VEk-mQ-daT">
                             <connections>
                                 <action selector="startNewTvSnap:" destination="fYn-Wa-w3D" id="niD-cn-Fqg"/>

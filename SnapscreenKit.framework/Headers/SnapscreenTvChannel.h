@@ -30,11 +30,17 @@
 /** An optional link to the homepage of this TV channel */
 @property (readonly, nonatomic, nullable) NSString* homepage;
 
+/** An optional link to a channel logo */
+@property (readonly, nonatomic, nullable) NSString* logoImageUrl;
+
+/** An optional link to a channel poster image */
+@property (readonly, nonatomic, nullable) NSString* posterImageUrl;
+
 /**
  
  Initiailzer
  
  */
-- (_Nonnull instancetype) initWithChannelId: (long long) channelId channelCode: (NSString* _Nonnull) channelCode countryCode: (NSString* _Nonnull) countryCode name: (NSString* _Nullable) name homepage: (NSString* _Nullable) homepage;
+- (_Nonnull instancetype) initWithChannelId: (long long) channelId channelCode: (NSString* _Nonnull) channelCode countryCode: (NSString* _Nonnull) countryCode name: (NSString* _Nullable) name homepage: (NSString* _Nullable) homepage logoImageUrl: (NSString* _Nullable) logoImageUrl posterImageUrl: (NSString* _Nullable) posterImageUrl;
 
 @end

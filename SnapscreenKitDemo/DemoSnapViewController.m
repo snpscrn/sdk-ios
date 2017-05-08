@@ -36,6 +36,14 @@
     [self presentViewController: [[UINavigationController alloc] initWithRootViewController: snapViewController] animated: YES completion: nil];
 }
 
+- (IBAction)startNewSportEventMatch:(id)sender {
+    SnapscreenSnapConfiguration* configuration = [SnapscreenSnapConfiguration new];
+    configuration.searchForSportEvents = YES;
+    
+    SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self configuration: configuration];
+    [self presentViewController: [[UINavigationController alloc] initWithRootViewController: snapViewController] animated: YES completion: nil];
+}
+
 - (void) snapscreenSnapViewController: (SnapscreenSnapViewController* _Nonnull) snapViewController didSnapResult: (SnapscreenSearchResult* _Nonnull) snapResult {
     [snapViewController dismissViewControllerAnimated: YES completion: nil];
     NSMutableArray* resultTextArray = [NSMutableArray new];
@@ -47,6 +55,14 @@
     } else if (snapResult.advertisementSearchResult) {
         for (SnapscreenAdvertisementSearchResultEntry* resultEntry in snapResult.advertisementSearchResult.results) {
             [resultTextArray addObject: [NSString stringWithFormat: @"Ad Title: %@; Timestamp: %@", resultEntry.advertisement.advertisementTitle, @(resultEntry.timestamp)]];
+        }
+    } else if (snapResult.sportEventSearchResult) {
+        for (SnapscreenSportEventSearchResultEntry* entry in snapResult.sportEventSearchResult.results) {
+            NSMutableArray* competitorArray = [NSMutableArray new];
+            for (SnapscreenSportEventCompetitor* competitor in entry.event.competitors) {
+                [competitorArray addObject: competitor.name];
+            }
+            [resultTextArray addObject: [NSString stringWithFormat: @"Sport Event: %@ %@: %@", entry.event.sport, entry.event.tournament, [competitorArray componentsJoinedByString: @" "]]];
         }
     }
     self.statusLabel.text = [resultTextArray componentsJoinedByString: @"\n"];

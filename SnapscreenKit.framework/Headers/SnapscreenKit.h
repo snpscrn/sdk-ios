@@ -27,11 +27,10 @@
 #import <SnapscreenKit/SnapscreenAdvertisementSearchResultEntry.h>
 #import <SnapscreenKit/SnapscreenAdvertisement.h>
 
-#import <SnapscreenKit/SnapscreenSportsMatchSearchResult.h>
-#import <SnapscreenKit/SnapscreenSportsMatchSearchResultEntry.h>
-#import <SnapscreenKit/SnapscreenSportsMatch.h>
-#import <SnapscreenKit/SnapscreenSportsCompetitors.h>
-#import <SnapscreenKit/SnapscreenSportsPlayer.h>
+#import <SnapscreenKit/SnapscreenSportEventSearchResult.h>
+#import <SnapscreenKit/SnapscreenSportEventSearchResultEntry.h>
+#import <SnapscreenKit/SnapscreenSportEvent.h>
+#import <SnapscreenKit/SnapscreenSportEventCompetitor.h>
 
 #import <SnapscreenKit/SnapscreenWebSearchService.h>
 #import <SnapscreenKit/SnapscreenPageMetadata.h>
