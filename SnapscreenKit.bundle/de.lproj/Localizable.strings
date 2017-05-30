@@ -17,3 +17,6 @@
 "Snapscreen_Snapping_Progress_Stage_Sending_Fingerprint" = "Sende Informationen ...";
 "Snapscreen_Snapping_Progress_Stage_Waiting_For_Response" = "Warte auf Resultate ...";
 "Snapscreen_Snapping_Progress_Stage_Done" = "Bereit";
+
+"Snapscreen_SnapResults_Title" = "Snap Ergebnisse";
+"Snapscreen_SnapResults_Header" = "Bitte wählen Sie das am besten passende Ergebnis";

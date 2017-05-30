@@ -18,3 +18,6 @@
 "Snapscreen_Snapping_Progress_Stage_Sending_Fingerprint" = "Отправка информации...";
 "Snapscreen_Snapping_Progress_Stage_Waiting_For_Response" = "Получение результата...";
 "Snapscreen_Snapping_Progress_Stage_Done" = "Готово";
+
+"Snapscreen_SnapResults_Title" = "Результаты Поиска";
+"Snapscreen_SnapResults_Header" = "Пожалуйста, выберите наиболее подходящий результат";

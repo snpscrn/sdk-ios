@@ -21,10 +21,10 @@
 /** The advertisement this result is associated to */
 @property (readonly, nonatomic, nonnull) SnapscreenAdvertisement* advertisement;
 
-/** The unix timestamp (milliseconds since 1.1.1970) that represents the recognized frame */
-@property (readonly, nonatomic) long long timestamp;
+/** The relative offset from the start of the ad in milliseconds for the recognized frame */
+@property (readonly, nonatomic) long long offset;
 
-/** A relative delta to the current snapscreen timestamp - use this for very exact syncing with the backend by adding to [SnapscreenKit currentSnapscreenTimestamp] */
-@property (readonly, nonatomic) long long snapscreenTimestampDelta;
+/** The relative offset from the start of the ad in seconds for the recognized frame */
+@property (readonly, nonatomic, nullable) NSNumber* offsetInSeconds;
 
 @end

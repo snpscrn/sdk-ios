@@ -19,7 +19,7 @@
         <a class="header-link" href="index.html">
           SnapscreenKit Docs
         </a>
-         (100% documented)
+         (99% documented)
       </p>
     
     
@@ -64,6 +64,15 @@
                 <a class="nav-group-task-link" href="Classes/SnapscreenCustomerConfiguration.html">SnapscreenCustomerConfiguration</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SnapscreenEpgUnit.html">SnapscreenEpgUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SnapscreenEpgUnitCredits.html">SnapscreenEpgUnitCredits</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SnapscreenEpgUnitPerson.html">SnapscreenEpgUnitPerson</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/SnapscreenKit.html">SnapscreenKit</a>
               </li>
               <li class="nav-group-task">
@@ -80,6 +89,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/SnapscreenSnapConfiguration.html">SnapscreenSnapConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)SnapscreenSnapResultsViewController">SnapscreenSnapResultsViewController</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/SnapscreenSnapViewController.html">SnapscreenSnapViewController</a>
@@ -160,6 +172,9 @@
                 <a class="nav-group-task-link" href="Protocols/SnapscreenLoggingHandler.html">SnapscreenLoggingHandler</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SnapscreenSnapResultsViewControllerDelegate.html">SnapscreenSnapResultsViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/SnapscreenSnapViewControllerDelegate.html">SnapscreenSnapViewControllerDelegate</a>
               </li>
             </ul>
@@ -226,7 +241,7 @@
 <pre class="highlight plaintext"><code>SnapscreenSnapConfiguration* configuration = [SnapscreenSnapConfiguration new];
 configuration.searchForTvResults = YES;
 
-SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self configuration: configuration];
+SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self resultsDelegate: self configuration: configuration];
 </code></pre>
 
 <p>Once you have retrieved the view controller, it&rsquo;s best to present it modally inside a UINavigationController:</p>
@@ -240,7 +255,7 @@ SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscr
 <pre class="highlight plaintext"><code>SnapscreenSnapConfiguration* configuration = [SnapscreenSnapConfiguration new];
 configuration.searchForSportEvents = YES;
 
-SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self configuration: configuration];
+SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self resultsDelegate: self configuration: configuration];
 </code></pre>
 
 <p>Once you have retrieved the view controller, it&rsquo;s best to present it modally inside a UINavigationController:</p>
@@ -254,7 +269,7 @@ SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscr
 <pre class="highlight plaintext"><code>SnapscreenSnapConfiguration* configuration = [SnapscreenSnapConfiguration new];
 configuration.searchForAdvertisements = YES;
 
-SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self configuration: configuration];
+SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self resultsDelegate: self configuration: configuration];
 </code></pre>
 
 <p>Once you have retrieved the view controller, it&rsquo;s best to present it modally inside a UINavigationController:</p>
@@ -262,6 +277,9 @@ SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscr
 </code></pre>
 
 <p>The SnapscreenSnapViewController will send callbacks to the delegate you pass and you are responsible for dismissing the ViewController once it&rsquo;s no longer needed. The ViewController does not dismiss itself in any situation.  The <strong>SnapscreenSearchResult</strong> you receive from the delegate callback will have the advertisementSearchResult set when the search is successful.</p>
+<a href='#displaying-and-selecting-snap-results' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='displaying-and-selecting-snap-results'>Displaying and Selecting Snap Results</h2>
+
+<p>When snapping returns more than a single snap result and the user has multiple results to choose from, the <strong>SnapscreenSnapResultsViewController</strong> is automatically pushed onto the navigation stack. You can pass an optional resultsDelegate when instantiating the SnapViewController (see above) that implements the <strong>SnapscreenSnapResultsViewControllerDelegate</strong> protocol to control and customize how the results are displayed. This is optional and SnapscreenKit provides a default implementation. The <strong>SnapscreenSnapResultsViewControllerDelegate</strong> provides you with a callback that delivers the result entry that the user selected.</p>
 <a href='#web-search' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='web-search'>Web Search</h2>
 
 <p>In order to perform a web search, you simply call the corresponding method for the result type you want to get on the SnapscreenWebSearchService that you can retrieve from SnapscreenKit:</p>
@@ -294,7 +312,7 @@ SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscr
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2017-05-08)</p>
+      <p>&copy; 2017 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2017-05-30)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

@@ -15,13 +15,13 @@
  */
 @interface SnapscreenSnapConfiguration : NSObject
 
-/** Search for TV results of type SnapscreenTvSearchResult */
+/** Search for TV results of type `SnapscreenTvSearchResult` */
 @property (nonatomic, assign) BOOL searchForTvResults;
 
-/** Search for advertisements of type SnapscreenAdvertisementResult */
+/** Search for advertisements of type `SnapscreenAdvertisementSearchResult` */
 @property (nonatomic, assign) BOOL searchForAdvertisements;
 
-/** Search for sport event results */
+/** Search for sport event results of type `SnapscreenSportEventSearchResult` */
 @property (nonatomic, assign) BOOL searchForSportEvents;
 
 /** Perform automatic snapping (provided that the specified result types support autosnapping */

@@ -19,12 +19,12 @@
  */
 @interface SnapscreenSearchResult : NSObject
 
-/** An optional TV search result if the SnapscreenSnapConfiguration specified to search for TV results and a result was found */
+/** An optional TV search result if the `SnapscreenSnapConfiguration` specified to search for TV results and a result was found */
 @property (nullable, nonatomic, readonly) SnapscreenTvSearchResult* tvSearchResult;
 
-/** An optional advertisements search result if the SnapscreenSnapConfiguration specified to search for advertisements and a result was found */
+/** An optional advertisements search result if the `SnapscreenSnapConfiguration` specified to search for advertisements and a result was found */
 @property (nullable, nonatomic, readonly) SnapscreenAdvertisementSearchResult* advertisementSearchResult;
 
-/** An optional sports event search result if the SnapscreenSnapConfiguration specified to search for sport events and a result was found */
+/** An optional sports event search result if the `SnapscreenSnapConfiguration` specified to search for sport events and a result was found */
 @property (nullable, nonatomic, readonly) SnapscreenSportEventSearchResult* sportEventSearchResult;
 @end

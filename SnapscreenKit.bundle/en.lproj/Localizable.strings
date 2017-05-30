@@ -18,3 +18,6 @@
 "Snapscreen_Snapping_Progress_Stage_Sending_Fingerprint" = "Sending information ...";
 "Snapscreen_Snapping_Progress_Stage_Waiting_For_Response" = "Getting results ...";
 "Snapscreen_Snapping_Progress_Stage_Done" = "Ready";
+
+"Snapscreen_SnapResults_Title" = "Snap Results";
+"Snapscreen_SnapResults_Header" = "Please choose the best matching result";

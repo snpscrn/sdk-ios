@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SnapscreenSearchResultEntry.h"
 
-@class SnapscreenTvChannel;
+@class SnapscreenTvChannel, SnapscreenEpgUnit, SnapscreenSportEvent;
 
 /**
  
@@ -21,10 +21,16 @@
 /** The TV channel this result is associated to */
 @property (readonly, nonatomic, nonnull) SnapscreenTvChannel* channel;
 
+/** Optional resolved EPG unit that is currently playing on this channel */
+@property (readonly, nonatomic, nonnull) SnapscreenEpgUnit* epgUnit;
+
+/** Optional resolved sport event that is currently live on this channel */
+@property (readonly, nonatomic, nullable) SnapscreenSportEvent* sportEvent;
+
 /** The unix timestamp (milliseconds since 1.1.1970) that represents the recognized frame */
 @property (readonly, nonatomic) long long timestamp;
 
-/** A relative delta to the current snapscreen timestamp - use this for very exact syncing with the backend by adding to [SnapscreenKit currentSnapscreenTimestamp] */
+/** A relative delta to the current snapscreen timestamp - use this for very exact syncing with the backend by adding to ```[SnapscreenKit currentSnapscreenTimestamp]``` */
 @property (readonly, nonatomic) long long snapscreenTimestampDelta;
 
 @end

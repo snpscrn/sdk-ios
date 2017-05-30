@@ -1,7 +1,3 @@
-## Documentation
-
-For the full API documentation go to https://snpscrn.github.io/sdk-ios
-
 ## Requirements
 
 SnapscreenKit requires at least iOS 8.
@@ -81,7 +77,7 @@ In order to snap a TV image and search for TV channels via SnapscreenKit, you ne
 SnapscreenSnapConfiguration* configuration = [SnapscreenSnapConfiguration new];
 configuration.searchForTvResults = YES;
 
-SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self configuration: configuration];
+SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self resultsDelegate: self configuration: configuration];
 ```
 
 Once you have retrieved the view controller, it's best to present it modally inside a UINavigationController:
@@ -100,7 +96,7 @@ In order to snap a TV image and search for Sports content via SnapscreenKit, you
 SnapscreenSnapConfiguration* configuration = [SnapscreenSnapConfiguration new];
 configuration.searchForSportEvents = YES;
 
-SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self configuration: configuration];
+SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self resultsDelegate: self configuration: configuration];
 ```
 
 Once you have retrieved the view controller, it's best to present it modally inside a UINavigationController:
@@ -119,7 +115,7 @@ In order to snap a TV image and search for Advertisements via SnapscreenKit, you
 SnapscreenSnapConfiguration* configuration = [SnapscreenSnapConfiguration new];
 configuration.searchForAdvertisements = YES;
 
-SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self configuration: configuration];
+SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscreenKit] instantiateSnapscreenSnapViewControllerWithDelegate: self resultsDelegate: self configuration: configuration];
 ```
 
 Once you have retrieved the view controller, it's best to present it modally inside a UINavigationController:
@@ -129,6 +125,10 @@ Once you have retrieved the view controller, it's best to present it modally ins
 ```
 
 The SnapscreenSnapViewController will send callbacks to the delegate you pass and you are responsible for dismissing the ViewController once it's no longer needed. The ViewController does not dismiss itself in any situation.  The **SnapscreenSearchResult** you receive from the delegate callback will have the advertisementSearchResult set when the search is successful.
+
+## Displaying and Selecting Snap Results
+
+When snapping returns more than a single snap result and the user has multiple results to choose from, the **SnapscreenSnapResultsViewController** is automatically pushed onto the navigation stack. You can pass an optional resultsDelegate when instantiating the SnapViewController (see above) that implements the **SnapscreenSnapResultsViewControllerDelegate** protocol to control and customize how the results are displayed. This is optional and SnapscreenKit provides a default implementation. The **SnapscreenSnapResultsViewControllerDelegate** provides you with a callback that delivers the result entry that the user selected.
 
 ## Web Search
 

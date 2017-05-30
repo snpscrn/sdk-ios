@@ -11,7 +11,7 @@
 
 /**
  
- Protocol for providing location to SnapscreenKit. Pass an implementation of this protocol to SnapscreenKit 
+ Protocol for providing location to `SnapscreenKit`. Pass an implementation of this protocol to SnapscreenKit
  if your application already tracks user location in order to improve result quality.
  
  This is usually only necessary for SDK uses in apps that are supported in multiple countries.
@@ -28,7 +28,7 @@
  */
 - (CLLocation*) currentUserLocation;
 
-/** Called by SnapscreenKit if an updated user location is preferred. */
+/** Called by `SnapscreenKit` if an updated user location is preferred. */
 - (void) updateCurrentUserLocation;
 
 @end

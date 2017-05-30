@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class SnapscreenEpgUnit, SnapscreenSportEvent;
+
 /**
  
  Represents a TV channel with the internal Snapscreen representation
@@ -36,11 +38,24 @@
 /** An optional link to a channel poster image */
 @property (readonly, nonatomic, nullable) NSString* posterImageUrl;
 
+/** Optional resolved EPG unit that is currently playing on this channel */
+@property (readonly, nonatomic, nullable) SnapscreenEpgUnit* epgUnit;
+
+/** Optional resolved sport event that is currently live on this channel */
+@property (readonly, nonatomic, nullable) SnapscreenSportEvent* sportEvent;
+
+/** Optional URL for a live image of the currently epg unit on this channel */
+@property (readonly, nonatomic, nullable) NSString* liveImageUrl;
+
+/** Determines whether an access token is necessary when fetching the liveImageURL */
+@property (readonly, nonatomic) Boolean liveImageUrlSecured;
+
+
 /**
  
  Initiailzer
  
  */
-- (_Nonnull instancetype) initWithChannelId: (long long) channelId channelCode: (NSString* _Nonnull) channelCode countryCode: (NSString* _Nonnull) countryCode name: (NSString* _Nullable) name homepage: (NSString* _Nullable) homepage logoImageUrl: (NSString* _Nullable) logoImageUrl posterImageUrl: (NSString* _Nullable) posterImageUrl;
+- (_Nonnull instancetype) initWithChannelId: (long long) channelId channelCode: (NSString* _Nonnull) channelCode countryCode: (NSString* _Nonnull) countryCode name: (NSString* _Nullable) name homepage: (NSString* _Nullable) homepage logoImageUrl: (NSString* _Nullable) logoImageUrl posterImageUrl: (NSString* _Nullable) posterImageUrl liveImageUrl: (NSString* _Nullable) liveImageUrl liveImageUrlSecured: (BOOL) liveImageUrlSecured;
 
 @end

@@ -23,9 +23,9 @@
  
  Fetch websites matching a search query for a specific channel.
  
- @param tvChannelCode The channel code of the TV channel you want to search for (this needs to be the Snapscreen-specific channel code that can be retrieved as channelCode from SnapscreenTvChannel)
+ @param tvChannelCode The channel code of the TV channel you want to search for (this needs to be the Snapscreen-specific channel code that can be retrieved as channelCode from `SnapscreenTvChannel`)
  @param query Any custom search query
- @param timestampRef Unit timestamp (milliseconds since 1.1.1970) used to identify the program playing on the given channel. Either use the timestamp of a SnapscreenTvSearchResultEntry or [SnapscreenKit sharedSnapscreenKit].currentSnapscreenTimestamp for the current time
+ @param timestampRef Unit timestamp (milliseconds since 1.1.1970) used to identify the program playing on the given channel. Either use the timestamp of a `SnapscreenTvSearchResultEntry` or ```[SnapscreenKit sharedSnapscreenKit].currentSnapscreenTimestamp``` for the current time
  @param page The page for which to fetch results for
  @param size Page size you want to retrieve (always use the same size if you implemented multiple page fetching)
  @param completionBlock The completion block when the operation finishes or fails. Always called on the main thread.
@@ -37,9 +37,9 @@
  
  Fetch images matching a search query for a specific channel.
  
- @param tvChannelCode The channel code of the TV channel you want to search for (this needs to be the Snapscreen-specific channel code that can be retrieved as channelCode from SnapscreenTvChannel)
+ @param tvChannelCode The channel code of the TV channel you want to search for (this needs to be the Snapscreen-specific channel code that can be retrieved as channelCode from `SnapscreenTvChannel`)
  @param query Any custom search query
- @param timestampRef Unit timestamp (milliseconds since 1.1.1970) used to identify the program playing on the given channel. Either use the timestamp of a SnapscreenTvSearchResultEntry or [SnapscreenKit sharedSnapscreenKit].currentSnapscreenTimestamp for the current time
+ @param timestampRef Unit timestamp (milliseconds since 1.1.1970) used to identify the program playing on the given channel. Either use the timestamp of a `SnapscreenTvSearchResultEntry` or ```[SnapscreenKit sharedSnapscreenKit].currentSnapscreenTimestamp``` for the current time
  @param page The page for which to fetch results for
  @param size Page size you want to retrieve (always use the same size if you implemented multiple page fetching)
  @param completionBlock The completion block when the operation finishes or fails. Always called on the main thread.
@@ -51,9 +51,9 @@
  
  Fetch video matching a search query for a specific channel.
  
- @param tvChannelCode The channel code of the TV channel you want to search for (this needs to be the Snapscreen-specific channel code that can be retrieved as channelCode from SnapscreenTvChannel)
+ @param tvChannelCode The channel code of the TV channel you want to search for (this needs to be the Snapscreen-specific channel code that can be retrieved as channelCode from `SnapscreenTvChannel`)
  @param query Any custom search query
- @param timestampRef Unit timestamp (milliseconds since 1.1.1970) used to identify the program playing on the given channel. Either use the timestamp of a SnapscreenTvSearchResultEntry or [SnapscreenKit sharedSnapscreenKit].currentSnapscreenTimestamp for the current time
+ @param timestampRef Unit timestamp (milliseconds since 1.1.1970) used to identify the program playing on the given channel. Either use the timestamp of a `SnapscreenTvSearchResultEntry` or ```[SnapscreenKit sharedSnapscreenKit].currentSnapscreenTimestamp``` for the current time
  @param page The page for which to fetch results for
  @param size Page size you want to retrieve (always use the same size if you implemented multiple page fetching)
  @param completionBlock The completion block when the operation finishes or fails. Always called on the main thread.

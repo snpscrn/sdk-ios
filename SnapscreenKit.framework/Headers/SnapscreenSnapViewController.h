@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class SnapscreenSnapViewController, SnapscreenSearchResult;
+@class SnapscreenSnapViewController, SnapscreenSearchResult, SnapscreenSearchResultEntry;
 
 /**
 
@@ -21,11 +21,11 @@
  
  Snapping did occur and did find at least one result. You should dismiss the UI in this case and continue in your application's flow that uses the snap result. 
 
- @param snapViewController The view controller for snapping
  @param snapResult The result of the snap. Contains at least one result entry.
+ @param selectedResultEntry The selected entry of the snap.
  
  */
-- (void) snapscreenSnapViewController: (SnapscreenSnapViewController* _Nonnull) snapViewController didSnapResult: (SnapscreenSearchResult* _Nonnull) snapResult;
+- (void) snapscreenDidSnapResult: (SnapscreenSearchResult* _Nonnull) snapResult selectedResultEntry: (SnapscreenSearchResultEntry* _Nonnull) selectedResultEntry;
 
 /**
  
@@ -59,7 +59,7 @@
 
 /**
  
- SnapscreenSnapViewController offers the snapping logic from Snapscreen to your application. Instantiate via SnapscreenKit and then display it in your application. The recommended way to present the view controller is to present it as a modal view that covers the whole screen.
+ SnapscreenSnapViewController offers the snapping logic from Snapscreen to your application. Instantiate via `SnapscreenKit` and then display it in your application. The recommended way to present the view controller is to present it as a modal view that covers the whole screen.
  
  Use the delegate callbacks to get information about the snapping process. In any case you are responsible to dismiss the view controller again.
  

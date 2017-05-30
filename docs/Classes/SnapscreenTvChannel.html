@@ -20,7 +20,7 @@
         <a class="header-link" href="../index.html">
           SnapscreenKit Docs
         </a>
-         (100% documented)
+         (99% documented)
       </p>
     
     
@@ -65,6 +65,15 @@
                 <a class="nav-group-task-link" href="../Classes/SnapscreenCustomerConfiguration.html">SnapscreenCustomerConfiguration</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenEpgUnit.html">SnapscreenEpgUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenEpgUnitCredits.html">SnapscreenEpgUnitCredits</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenEpgUnitPerson.html">SnapscreenEpgUnitPerson</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/SnapscreenKit.html">SnapscreenKit</a>
               </li>
               <li class="nav-group-task">
@@ -81,6 +90,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/SnapscreenSnapConfiguration.html">SnapscreenSnapConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)SnapscreenSnapResultsViewController">SnapscreenSnapResultsViewController</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/SnapscreenSnapViewController.html">SnapscreenSnapViewController</a>
@@ -159,6 +171,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/SnapscreenLoggingHandler.html">SnapscreenLoggingHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenSnapResultsViewControllerDelegate.html">SnapscreenSnapResultsViewControllerDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/SnapscreenSnapViewControllerDelegate.html">SnapscreenSnapViewControllerDelegate</a>
@@ -414,9 +429,137 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)SnapscreenTvChannel(im)initWithChannelId:channelCode:countryCode:name:homepage:logoImageUrl:posterImageUrl:"></a>
-                    <a name="//apple_ref/objc/Method/-initWithChannelId:channelCode:countryCode:name:homepage:logoImageUrl:posterImageUrl:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)SnapscreenTvChannel(im)initWithChannelId:channelCode:countryCode:name:homepage:logoImageUrl:posterImageUrl:">-initWithChannelId:channelCode:countryCode:name:homepage:logoImageUrl:posterImageUrl:</a>
+                    <a name="/c:objc(cs)SnapscreenTvChannel(py)epgUnit"></a>
+                    <a name="//apple_ref/objc/Property/epgUnit" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenTvChannel(py)epgUnit">epgUnit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Optional resolved EPG unit that is currently playing on this channel</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/SnapscreenEpgUnit.html">SnapscreenEpgUnit</a></span> <span class="o">*</span><span class="n">epgUnit</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">epgUnit</span><span class="p">:</span> <span class="kt"><a href="../Classes/SnapscreenEpgUnit.html">SnapscreenEpgUnit</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SnapscreenTvChannel(py)sportEvent"></a>
+                    <a name="//apple_ref/objc/Property/sportEvent" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenTvChannel(py)sportEvent">sportEvent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Optional resolved sport event that is currently live on this channel</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/SnapscreenSportEvent.html">SnapscreenSportEvent</a></span> <span class="o">*</span><span class="n">sportEvent</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">sportEvent</span><span class="p">:</span> <span class="kt"><a href="../Classes/SnapscreenSportEvent.html">SnapscreenSportEvent</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SnapscreenTvChannel(py)liveImageUrl"></a>
+                    <a name="//apple_ref/objc/Property/liveImageUrl" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenTvChannel(py)liveImageUrl">liveImageUrl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Optional URL for a live image of the currently epg unit on this channel</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">liveImageUrl</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">liveImageUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SnapscreenTvChannel(py)liveImageUrlSecured"></a>
+                    <a name="//apple_ref/objc/Property/liveImageUrlSecured" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenTvChannel(py)liveImageUrlSecured">liveImageUrlSecured</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Determines whether an access token is necessary when fetching the liveImageURL</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">Boolean</span> <span class="n">liveImageUrlSecured</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">liveImageUrlSecured</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)SnapscreenTvChannel(im)initWithChannelId:channelCode:countryCode:name:homepage:logoImageUrl:posterImageUrl:liveImageUrl:liveImageUrlSecured:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithChannelId:channelCode:countryCode:name:homepage:logoImageUrl:posterImageUrl:liveImageUrl:liveImageUrlSecured:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenTvChannel(im)initWithChannelId:channelCode:countryCode:name:homepage:logoImageUrl:posterImageUrl:liveImageUrl:liveImageUrlSecured:">-initWithChannelId:channelCode:countryCode:name:homepage:logoImageUrl:posterImageUrl:liveImageUrl:liveImageUrlSecured:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -437,12 +580,14 @@
                                       <span class="nf">name</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">name</span>
                                   <span class="nf">homepage</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">homepage</span>
                               <span class="nf">logoImageUrl</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">logoImageUrl</span>
-                            <span class="nf">posterImageUrl</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">posterImageUrl</span><span class="p">;</span></code></pre>
+                            <span class="nf">posterImageUrl</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">posterImageUrl</span>
+                              <span class="nf">liveImageUrl</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">liveImageUrl</span>
+                       <span class="nf">liveImageUrlSecured</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">liveImageUrlSecured</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">channelId</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">channelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">countryCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">homepage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">logoImageUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">posterImageUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">channelId</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">channelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">countryCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">homepage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">logoImageUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">posterImageUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">liveImageUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">liveImageUrlSecured</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -457,7 +602,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2017-05-08)</p>
+      <p>&copy; 2017 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2017-05-30)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

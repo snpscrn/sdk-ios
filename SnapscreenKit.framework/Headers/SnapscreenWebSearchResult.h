@@ -37,7 +37,7 @@ typedef NS_ENUM(NSInteger, SnapscreenWebSearchResultType) {
 
 /**
 
- Use this URL to open a SFSafariViewController when the user wants to visit the search result. This is required for result tracking and ordering!
+ Use this URL to open a ```SFSafariViewController``` when the user wants to visit the search result. This is required for result tracking and ordering!
  
  */
 @property (readonly, nonnull) NSURL* visitURL;

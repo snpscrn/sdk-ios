@@ -10,7 +10,7 @@
 
 #define SnapscreenErrorDomain @"SnapscreenKitErrorDomain"
 
-/// A list of possible error codes that are returned by SnapscreenKit. The error domain for errors from SnapscreenKit is usually SnapscreenKitErrorDomain unless some underlying error is the cause.
+/// A list of possible error codes that are returned by SnapscreenKit. The error domain for errors from `SnapscreenKit` is usually `SnapscreenKitErrorDomain` unless some underlying error is the cause.
 typedef NS_ENUM(NSInteger, SnapscreenErrorCode) {
     /// Authentication credentials (clientID and clientSecret) are missing
     SnapscreenClientCredentialsMissing,
