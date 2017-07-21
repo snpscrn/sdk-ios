@@ -1,3 +1,8 @@
+## Documentation
+
+For the full API documentation go to https://snpscrn.github.io/sdk-ios
+
+
 ## Requirements
 
 SnapscreenKit requires at least iOS 8.
