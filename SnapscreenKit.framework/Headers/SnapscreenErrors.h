@@ -21,5 +21,7 @@ typedef NS_ENUM(NSInteger, SnapscreenErrorCode) {
     /// An error occured while loading webresources
     SnapscreenWebSearchError,
     /// Web search resulted in no results
-    SnapscreenWebSearchNoResults
+    SnapscreenWebSearchNoResults,
+    /// No access token could be fetched
+    SnapscreenAccessTokenMissing
 };
