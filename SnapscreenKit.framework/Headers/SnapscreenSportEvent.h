@@ -41,6 +41,12 @@
 /** The name of the tournament */
 @property (readonly, nullable) NSString* tournament;
 
+/** Provider code for the sport data - e.q. Betradar */
+@property (readonly, nullable) NSString* sportDataProviderCode;
+
+/** Id for this event for the given sportDataProvider - e.g. Betradar MatchID */
+@property (readonly, nullable) NSString* sportDataProviderMatchId;
+
 /** Information about the competitors in this event */
 @property (readonly, nonnull) NSArray<SnapscreenSportEventCompetitor*>* competitors;
 
