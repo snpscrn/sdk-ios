@@ -24,10 +24,10 @@
 @property (readonly, nullable) NSString* externalId;
 
 /** The queued start date of the event */
-@property (readonly, nonnull) NSDate* startTime;
+@property (readonly, nullable) NSDate* startTime;
 
 /** The queued end date of the event */
-@property (readonly, nonnull) NSDate* endTime;
+@property (readonly, nullable) NSDate* endTime;
 
 /** An internal channel identifier */
 @property (readonly, nonatomic) long long tvChannelId;
