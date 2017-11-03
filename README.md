@@ -162,3 +162,7 @@ The SnapscreenSnapViewController supports customization of the following propert
 * **UINavigationBar** and **UIBarButtonItem** can be customized via the UIAppearace APIs
 * The color of the view finder can be customized by setting the **tintColor** of SnapscreenSnapViewController
 * The image for the snap button can be customized by setting the *snapButtonImage** of SnapscreenSnapViewController
+
+## Support
+
+In case of any questions or problems please contact us at [support@snapscreen.com](mailto:support@snapscreen.com).
