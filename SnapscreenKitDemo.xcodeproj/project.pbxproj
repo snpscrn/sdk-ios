@@ -18,6 +18,7 @@
 		5BA477F01D9A77FE00E30F6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA477EE1D9A77FE00E30F6C /* Main.storyboard */; };
 		5BA477F21D9A77FE00E30F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BA477F11D9A77FE00E30F6C /* Assets.xcassets */; };
 		5BA477F51D9A77FE00E30F6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA477F31D9A77FE00E30F6C /* LaunchScreen.storyboard */; };
+		5BB745EB1FE4087B008BF3DF /* SampleSnapQuadrangleResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB745EA1FE4087B008BF3DF /* SampleSnapQuadrangleResultView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +52,8 @@
 		5BA477F11D9A77FE00E30F6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BA477F41D9A77FE00E30F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BA477F61D9A77FE00E30F6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BB745E91FE4087B008BF3DF /* SampleSnapQuadrangleResultView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleSnapQuadrangleResultView.h; sourceTree = "<group>"; };
+		5BB745EA1FE4087B008BF3DF /* SampleSnapQuadrangleResultView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleSnapQuadrangleResultView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 				5B824F051D9A8B2500A8E7DA /* DemoSnapViewController.m */,
 				5B824F071D9A8B2E00A8E7DA /* DemoWebsearchViewController.h */,
 				5B824F081D9A8B2E00A8E7DA /* DemoWebsearchViewController.m */,
+				5BB745E91FE4087B008BF3DF /* SampleSnapQuadrangleResultView.h */,
+				5BB745EA1FE4087B008BF3DF /* SampleSnapQuadrangleResultView.m */,
 			);
 			path = SnapscreenKitDemo;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB745EB1FE4087B008BF3DF /* SampleSnapQuadrangleResultView.m in Sources */,
 				5BA477ED1D9A77FE00E30F6C /* ViewController.m in Sources */,
 				5B824F061D9A8B2500A8E7DA /* DemoSnapViewController.m in Sources */,
 				5BA477EA1D9A77FE00E30F6C /* AppDelegate.m in Sources */,

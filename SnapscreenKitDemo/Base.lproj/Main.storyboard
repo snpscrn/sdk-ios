@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SAb-gg-Srh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SAb-gg-Srh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -76,39 +76,93 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNi-oo-bJO">
-                                <rect key="frame" x="32" y="96" width="311" height="490"/>
+                                <rect key="frame" x="32" y="310" width="311" height="276"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Standard Snap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8X-nQ-ehE">
+                                <rect key="frame" x="32" y="72" width="311" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="AR Snap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mst-fK-4Lb">
+                                <rect key="frame" x="32" y="156" width="311" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="254" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VjC-G6-IcK">
+                                <rect key="frame" x="16" y="101" width="30" height="30"/>
+                                <state key="normal" title="TV"/>
+                                <connections>
+                                    <action selector="startNewTvSnap:" destination="fYn-Wa-w3D" eventType="touchUpInside" id="jA6-su-Uyx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9t-CZ-lFR">
+                                <rect key="frame" x="147" y="101" width="81" height="30"/>
+                                <state key="normal" title="Sport Event"/>
+                                <connections>
+                                    <action selector="startNewSportEventSnap:" destination="fYn-Wa-w3D" eventType="touchUpInside" id="CFH-ns-t8x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYJ-8y-Rr6">
+                                <rect key="frame" x="329" y="101" width="30" height="30"/>
+                                <state key="normal" title="Ad"/>
+                                <connections>
+                                    <action selector="startNewAdSnap:" destination="fYn-Wa-w3D" eventType="touchUpInside" id="0c7-pr-xtO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biH-2I-TK9">
+                                <rect key="frame" x="16" y="185" width="30" height="30"/>
+                                <state key="normal" title="TV"/>
+                                <connections>
+                                    <action selector="startNewTvARSnap:" destination="fYn-Wa-w3D" eventType="touchUpInside" id="Dir-we-O0P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="255" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkq-Xa-QmG">
+                                <rect key="frame" x="147" y="185" width="81" height="30"/>
+                                <state key="normal" title="Sport Event"/>
+                                <connections>
+                                    <action selector="startNewSportEventARSnap:" destination="fYn-Wa-w3D" eventType="touchUpInside" id="0N9-xV-EAp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfB-4j-ehx">
+                                <rect key="frame" x="329" y="185" width="30" height="30"/>
+                                <state key="normal" title="Ad"/>
+                                <connections>
+                                    <action selector="startNewAdARSnap:" destination="fYn-Wa-w3D" eventType="touchUpInside" id="WXT-Pz-fe3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="j8X-nQ-ehE" firstAttribute="leading" secondItem="6fI-Xk-RMA" secondAttribute="leadingMargin" constant="16" id="1LL-Ue-VNb"/>
+                            <constraint firstItem="Mst-fK-4Lb" firstAttribute="top" secondItem="VjC-G6-IcK" secondAttribute="bottom" constant="25" id="6gV-D6-BFJ"/>
+                            <constraint firstItem="Mst-fK-4Lb" firstAttribute="leading" secondItem="6fI-Xk-RMA" secondAttribute="leadingMargin" constant="16" id="7CX-rt-r7b"/>
+                            <constraint firstItem="k9t-CZ-lFR" firstAttribute="centerX" secondItem="6fI-Xk-RMA" secondAttribute="centerX" id="7tR-0a-Rrt"/>
+                            <constraint firstItem="sNi-oo-bJO" firstAttribute="top" secondItem="mkq-Xa-QmG" secondAttribute="bottom" constant="95" id="8rL-Wp-jaK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oYJ-8y-Rr6" secondAttribute="trailing" id="Cro-sW-HhX"/>
                             <constraint firstAttribute="trailing" secondItem="sNi-oo-bJO" secondAttribute="trailing" constant="32" id="G7b-D2-20m"/>
+                            <constraint firstItem="k9t-CZ-lFR" firstAttribute="top" secondItem="j8X-nQ-ehE" secondAttribute="bottom" constant="8" id="HzZ-w6-mMr"/>
                             <constraint firstItem="sNi-oo-bJO" firstAttribute="leading" secondItem="6fI-Xk-RMA" secondAttribute="leading" constant="32" id="IoZ-G0-RXL"/>
                             <constraint firstItem="ITD-Gl-4lp" firstAttribute="top" secondItem="sNi-oo-bJO" secondAttribute="bottom" constant="32" id="KdN-Sf-ZR1"/>
-                            <constraint firstItem="sNi-oo-bJO" firstAttribute="top" secondItem="MBe-zw-pyo" secondAttribute="bottom" constant="32" id="hUf-zK-zYl"/>
+                            <constraint firstItem="j8X-nQ-ehE" firstAttribute="top" secondItem="MBe-zw-pyo" secondAttribute="bottom" constant="8" id="PEv-w8-QkA"/>
+                            <constraint firstItem="mkq-Xa-QmG" firstAttribute="top" secondItem="Mst-fK-4Lb" secondAttribute="bottom" constant="8" id="Qo6-bO-pue"/>
+                            <constraint firstItem="biH-2I-TK9" firstAttribute="leading" secondItem="6fI-Xk-RMA" secondAttribute="leadingMargin" id="Sbi-5E-hhQ"/>
+                            <constraint firstItem="oYJ-8y-Rr6" firstAttribute="top" secondItem="j8X-nQ-ehE" secondAttribute="bottom" constant="8" id="Ttd-Wo-rFu"/>
+                            <constraint firstItem="VjC-G6-IcK" firstAttribute="leading" secondItem="6fI-Xk-RMA" secondAttribute="leadingMargin" id="VRP-qR-fzf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mst-fK-4Lb" secondAttribute="trailing" constant="16" id="aMz-gD-7r1"/>
+                            <constraint firstItem="mkq-Xa-QmG" firstAttribute="centerX" secondItem="6fI-Xk-RMA" secondAttribute="centerX" id="bmL-DV-ICd"/>
+                            <constraint firstItem="VjC-G6-IcK" firstAttribute="top" secondItem="j8X-nQ-ehE" secondAttribute="bottom" constant="8" id="f6I-8d-MmQ"/>
+                            <constraint firstItem="biH-2I-TK9" firstAttribute="top" secondItem="Mst-fK-4Lb" secondAttribute="bottom" constant="8" id="gfK-eQ-fii"/>
+                            <constraint firstItem="XfB-4j-ehx" firstAttribute="top" secondItem="Mst-fK-4Lb" secondAttribute="bottom" constant="8" id="iPx-lo-Ak2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j8X-nQ-ehE" secondAttribute="trailing" constant="16" id="rRA-Ql-se5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XfB-4j-ehx" secondAttribute="trailing" id="vtA-C4-i3N"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7Iv-A8-nna">
-                        <leftBarButtonItems>
-                            <barButtonItem title="Ad Snap" id="54t-1u-aPw">
-                                <connections>
-                                    <action selector="startNewAdSnap:" destination="fYn-Wa-w3D" id="f4f-Gs-KhD"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Sport Event Snap" id="TbA-e0-np1">
-                                <connections>
-                                    <action selector="startNewSportEventMatch:" destination="fYn-Wa-w3D" id="MJ8-8p-j2J"/>
-                                </connections>
-                            </barButtonItem>
-                        </leftBarButtonItems>
-                        <barButtonItem key="rightBarButtonItem" title="Tv Snap" id="VEk-mQ-daT">
-                            <connections>
-                                <action selector="startNewTvSnap:" destination="fYn-Wa-w3D" id="niD-cn-Fqg"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="7Iv-A8-nna"/>
                     <connections>
                         <outlet property="statusLabel" destination="sNi-oo-bJO" id="4KG-zu-klm"/>
                     </connections>
@@ -142,7 +196,7 @@
                     <tabBarItem key="tabBarItem" title="Snap" id="XsO-T5-Yq4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jsC-nk-3Qu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -161,7 +215,7 @@
                     <tabBarItem key="tabBarItem" title="Web Search" id="jw7-VT-Wqc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sg1-kl-Ygv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
