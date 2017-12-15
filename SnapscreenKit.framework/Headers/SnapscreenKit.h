@@ -44,6 +44,9 @@
 #import <SnapscreenKit/SnapscreenWebSearchImageResult.h>
 #import <SnapscreenKit/SnapscreenWebSearchVideoResult.h>
 
+#import <SnapscreenKit/SnapscreenResultQuadrangle.h>
+
+#import <SnapscreenKit/SnapscreenARSnapViewController.h>
 
 /// Project version number for SnapscreenKit.
 FOUNDATION_EXPORT double SnapscreenKitVersionNumber;
@@ -116,6 +119,18 @@ SnapscreenKit offers integration of the Snapscreen functions in your app. Before
  
  */
 - (SnapscreenSnapViewController* _Nullable) instantiateSnapscreenSnapViewControllerWithDelegate: (id<SnapscreenSnapViewControllerDelegate> _Nonnull) delegate resultsDelegate: (id<SnapscreenSnapResultsViewControllerDelegate> _Nullable) resultsDelegate configuration: (SnapscreenSnapConfiguration* _Nonnull) snapConfiguration;
+
+/**
+ 
+ Initializes a UIViewController for performing Live AR display of Snap results. Should be presented as a modal UIViewController in your application for best experience.
+ 
+ @param delegate The delegate for the view controller that receives callbacks during the snapping process.
+ @param snapConfiguration The configuration for the snap
+ 
+ @return SnapscreenARSnapViewController A fully configured view controller for performing a snap and displaying live AR results. Returns null if you did not initialize SnapscreenKit correctly or an authentication error occured during initialization.
+ 
+ */
+- (SnapscreenARSnapViewController* _Nullable) instantiateARSnapscreenSnapViewControllerWithDelegate: (id<SnapscreenARSnapViewControllerDelegate> _Nonnull) delegate configuration: (SnapscreenSnapConfiguration* _Nonnull) snapConfiguration;
 
 /**
  

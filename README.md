@@ -1,10 +1,3 @@
-## Documentation
-
-For the full API documentation go to https://snpscrn.github.io/sdk-ios
-
-## Support
-In case of any questions or problems please contact us at [support@snapscreen.com](mailto:support@snapscreen.com).
-
 ## Requirements
 
 SnapscreenKit requires at least iOS 8.
@@ -164,6 +157,16 @@ The SnapscreenSnapViewController supports customization of the following propert
 * **UINavigationBar** and **UIBarButtonItem** can be customized via the UIAppearace APIs
 * The color of the view finder can be customized by setting the **tintColor** of SnapscreenSnapViewController
 * The image for the snap button can be customized by setting the *snapButtonImage** of SnapscreenSnapViewController
+
+## Implement Live / AR view
+
+SnapscreenKit also offers you the ability to provide AR-like experiences that allow you to overlay information onto the live camera image based on the snapped content and position. In order to use this, you need to instantiate a different view controller that provides detailed callbacks to a specific delegate *SnapscreenARSnapViewControllerDelegate***.
+
+```
+[[SnapscreenKit sharedSnapscreenKit] instantiateARSnapscreenSnapViewControllerWithDelegate: <delegate> configuration: configuration]
+```
+
+The delegate provides you with callbacks with a view that you may add your custom drawing logic to and provides callbacks when results are found and lost in the live camera view including details about the result as well as an exact position in screen coordinates.
 
 ## Support
 

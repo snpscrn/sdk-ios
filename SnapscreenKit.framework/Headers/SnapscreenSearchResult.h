@@ -11,6 +11,7 @@
 @class SnapscreenTvSearchResult;
 @class SnapscreenAdvertisementSearchResult;
 @class SnapscreenSportEventSearchResult;
+@class SnapscreenResultQuadrangle;
 
 /**
  
@@ -27,4 +28,8 @@
 
 /** An optional sports event search result if the `SnapscreenSnapConfiguration` specified to search for sport events and a result was found */
 @property (nullable, nonatomic, readonly) SnapscreenSportEventSearchResult* sportEventSearchResult;
+
+/** An optional quadrangle determining the position of the result in the view */
+@property (nullable, nonatomic, readonly) SnapscreenResultQuadrangle* resultQuadrangle;
+
 @end

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SnapscreenARSnapViewControllerDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+
+    <a name="//apple_ref/objc/Protocol/SnapscreenARSnapViewControllerDelegate" class="dashAnchor"></a>
+
+    <a title="SnapscreenARSnapViewControllerDelegate Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          SnapscreenKit Docs
+        </a>
+         (99% documented)
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">SnapscreenKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      SnapscreenARSnapViewControllerDelegate Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../setup-guide.html">Setup Guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenARSnapViewController.html">SnapscreenARSnapViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenAccessToken.html">SnapscreenAccessToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenAccessTokenHolder.html">SnapscreenAccessTokenHolder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenAdvertisement.html">SnapscreenAdvertisement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenAdvertisementSearchResult.html">SnapscreenAdvertisementSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenAdvertisementSearchResultEntry.html">SnapscreenAdvertisementSearchResultEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenCustomerConfiguration.html">SnapscreenCustomerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenEpgUnit.html">SnapscreenEpgUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenEpgUnitCredits.html">SnapscreenEpgUnitCredits</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenEpgUnitPerson.html">SnapscreenEpgUnitPerson</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenKit.html">SnapscreenKit</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)SnapscreenNSLogLoggingHandler">SnapscreenNSLogLoggingHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenPageMetadata.html">SnapscreenPageMetadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenResultQuadrangle.html">SnapscreenResultQuadrangle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSearchResult.html">SnapscreenSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)SnapscreenSearchResultEntry">SnapscreenSearchResultEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSnapConfiguration.html">SnapscreenSnapConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)SnapscreenSnapResultsViewController">SnapscreenSnapResultsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSnapViewController.html">SnapscreenSnapViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSportEvent.html">SnapscreenSportEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSportEventCompetitor.html">SnapscreenSportEventCompetitor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSportEventSearchResult.html">SnapscreenSportEventSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSportEventSearchResultEntry.html">SnapscreenSportEventSearchResultEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenTvChannel.html">SnapscreenTvChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenTvSearchResult.html">SnapscreenTvSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenTvSearchResultEntry.html">SnapscreenTvSearchResultEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenWebSearchImageResult.html">SnapscreenWebSearchImageResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenWebSearchResponse.html">SnapscreenWebSearchResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenWebSearchResult.html">SnapscreenWebSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenWebSearchService.html">SnapscreenWebSearchService</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenWebSearchSiteResult.html">SnapscreenWebSearchSiteResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenWebSearchVideoResult.html">SnapscreenWebSearchVideoResult</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SnapscreenKitVersionNumber">SnapscreenKitVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SnapscreenKitVersionString">SnapscreenKitVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SnapscreenARViewFinderMode.html">SnapscreenARViewFinderMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SnapscreenErrorCode.html">SnapscreenErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SnapscreenWebSearchResultType.html">SnapscreenWebSearchResultType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenARSnapViewControllerDelegate.html">SnapscreenARSnapViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenKitDelegate.html">SnapscreenKitDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenLocationProvider.html">SnapscreenLocationProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenLoggingHandler.html">SnapscreenLoggingHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenSnapResultsViewControllerDelegate.html">SnapscreenSnapResultsViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenSnapViewControllerDelegate.html">SnapscreenSnapViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>SnapscreenARSnapViewControllerDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">SnapscreenARSnapViewControllerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>Provides callbacks from the SnapscreenARSnapViewController during the snapping process</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SnapscreenARSnapViewControllerDelegate(im)snapscreenARViewController:didPrepareDrawingView:"></a>
+                    <a name="//apple_ref/objc/Method/-snapscreenARViewController:didPrepareDrawingView:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SnapscreenARSnapViewControllerDelegate(im)snapscreenARViewController:didPrepareDrawingView:">-snapscreenARViewController:didPrepareDrawingView:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The view controller perform initial setup and provides the given view for you to draw into</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">snapscreenARViewController</span><span class="p">:</span>
+            <span class="p">(</span><span class="n"><a href="../Classes/SnapscreenARSnapViewController.html">SnapscreenARSnapViewController</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">snapViewController</span>
+             <span class="nf">didPrepareDrawingView</span><span class="p">:(</span><span class="n">id</span><span class="p">)</span><span class="nv">drawingView</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">snapscreenARViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">snapViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/SnapscreenARSnapViewController.html">SnapscreenARSnapViewController</a></span><span class="p">,</span> <span class="n">didPrepareDrawingView</span> <span class="nv">drawingView</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>snapViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The view controller for snapping</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>drawingView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The view you can use to draw into. Covers the whole screen.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SnapscreenARSnapViewControllerDelegate(im)snapscreenARViewController:didFindResult:"></a>
+                    <a name="//apple_ref/objc/Method/-snapscreenARViewController:didFindResult:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SnapscreenARSnapViewControllerDelegate(im)snapscreenARViewController:didFindResult:">-snapscreenARViewController:didFindResult:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Autosnapping did occur and found the given result (which may include more than one result entry. The result also contains the quadrangle that marks the area in view coordinates where the result was detected. Note that you will receive the same logical result multiple times in sequence if e.g. the user keeps the camera pointed at a TV. The quadrangle is continuously updated to reflect any changes in camera position.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">snapscreenARViewController</span><span class="p">:</span>
+            <span class="p">(</span><span class="n"><a href="../Classes/SnapscreenARSnapViewController.html">SnapscreenARSnapViewController</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">snapViewController</span>
+                     <span class="nf">didFindResult</span><span class="p">:(</span><span class="n"><a href="../Classes/SnapscreenSearchResult.html">SnapscreenSearchResult</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">result</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">snapscreenARViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">snapViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/SnapscreenARSnapViewController.html">SnapscreenARSnapViewController</a></span><span class="p">,</span> <span class="n">didFind</span> <span class="nv">result</span><span class="p">:</span> <span class="kt"><a href="../Classes/SnapscreenSearchResult.html">SnapscreenSearchResult</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>snapViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The view controller for snapping</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result that autosnapping has found</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SnapscreenARSnapViewControllerDelegate(im)snapscreenARViewControllerDidLoseResult:"></a>
+                    <a name="//apple_ref/objc/Method/-snapscreenARViewControllerDidLoseResult:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SnapscreenARSnapViewControllerDelegate(im)snapscreenARViewControllerDidLoseResult:">-snapscreenARViewControllerDidLoseResult:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Autosnapping lost a given result.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">snapscreenARViewControllerDidLoseResult</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Classes/SnapscreenARSnapViewController.html">SnapscreenARSnapViewController</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">snapViewController</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">snapscreenARViewControllerDidLoseResult</span><span class="p">(</span><span class="n">_</span> <span class="nv">snapViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/SnapscreenARSnapViewController.html">SnapscreenARSnapViewController</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>snapViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The view controller for snapping</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SnapscreenARSnapViewControllerDelegate(im)snapscreenARSnapViewControllerDidCancel:"></a>
+                    <a name="//apple_ref/objc/Method/-snapscreenARSnapViewControllerDidCancel:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SnapscreenARSnapViewControllerDelegate(im)snapscreenARSnapViewControllerDidCancel:">-snapscreenARSnapViewControllerDidCancel:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The user did cancel snapping. You should dismiss the SnapscreenARSnapViewController.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">snapscreenARSnapViewControllerDidCancel</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Classes/SnapscreenARSnapViewController.html">SnapscreenARSnapViewController</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">snapViewController</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">snapscreenARSnapViewControllerDidCancel</span><span class="p">(</span><span class="n">_</span> <span class="nv">snapViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/SnapscreenARSnapViewController.html">SnapscreenARSnapViewController</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>snapViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The view controller for snapping</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2017 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2017-12-15)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
