@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SnapscreenSearchResultEntry.h"
 
-@class SnapscreenTvChannel, SnapscreenEpgUnit, SnapscreenSportEvent;
+@class SnapscreenTvChannel, SnapscreenEpgUnit;
 
 /**
  
@@ -23,9 +23,6 @@
 
 /** Optional resolved EPG unit that is currently playing on this channel */
 @property (readonly, nonatomic, nonnull) SnapscreenEpgUnit* epgUnit;
-
-/** Optional resolved sport event that is currently live on this channel */
-@property (readonly, nonatomic, nullable) SnapscreenSportEvent* sportEvent;
 
 /** The unix timestamp (milliseconds since 1.1.1970) that represents the recognized frame */
 @property (readonly, nonatomic) long long timestamp;
