@@ -72,7 +72,7 @@ Once you have initialized SnapscreenKit, you can also retrieve it by calling
 
 ## Note about App Store builds
 
-For convenience the framework is a so-called "fat" binary that contains slices for simulator and device architectures. As there is an issue in Xcode that does not correctly strip the unnecessary architectures from a framework you might run into issues when trying to submit your application to the App Store with the framework containing the simulator architecture. To work around this, we recommend to include the following shell script (provided by the Realm project) as a Build Phase in your project to strip the unnecessary slices from your application. 
+For convenience the framework is a so-called "fat" binary that contains slices for simulator and device architectures. As there is an issue in Xcode that does not correctly strip the unnecessary architectures from a framework you might run into issues when trying to submit your application to the App Store with the framework containing the simulator architecture. To work around this, we recommend to include the following shell script (provided by the Realm project) as a Build Phase in your project to strip the unnecessary slices from your application.
 
 https://github.com/realm/realm-cocoa/blob/d59c86f11525f346c8e8db277fdbf2d9ff990d98/scripts/strip-frameworks.sh
 
@@ -113,6 +113,11 @@ Once you have retrieved the view controller, it's best to present it modally ins
 ```
 
 The SnapscreenSnapViewController will send callbacks to the delegate you pass and you are responsible for dismissing the ViewController once it's no longer needed. The ViewController does not dismiss itself in any situation. The **SnapscreenSearchResult** you receive from the delegate callback will have the sportEventSearchResult set when the search is successful.
+
+
+The following sequence diagram shows the flow between your app, the SDK and the Snapscreen backend.
+
+![Sequence Diagram showing flow between app, SDK and Snapscreen backend](docs/sequence_diagram_sports.png "Sequence Diagram showing flow between app, SDK and Snapscreen backend")
 
 ## Snapping Advertising content
 
