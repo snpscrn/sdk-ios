@@ -8,6 +8,9 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -20,7 +23,13 @@
         <a class="header-link" href="../index.html">
           SnapscreenKit Docs
         </a>
-         (99% documented)
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
       </p>
     
     
@@ -63,6 +72,21 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/SnapscreenAdvertisementSearchResultEntry.html">SnapscreenAdvertisementSearchResultEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenClipShareInformation.html">SnapscreenClipShareInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenClipSharingConfiguration.html">SnapscreenClipSharingConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenClipSharingNavigationController.html">SnapscreenClipSharingNavigationController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenClipSharingTutorialContent.html">SnapscreenClipSharingTutorialContent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenClipSharingViewController.html">SnapscreenClipSharingViewController</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/SnapscreenCustomerConfiguration.html">SnapscreenCustomerConfiguration</a>
@@ -156,13 +180,16 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/SnapscreenARViewFinderMode.html">SnapscreenARViewFinderMode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/SnapscreenErrorCode.html">SnapscreenErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SnapscreenSearchType.html">SnapscreenSearchType</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/SnapscreenWebSearchResultType.html">SnapscreenWebSearchResultType</a>
@@ -174,6 +201,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/SnapscreenARSnapViewControllerDelegate.html">SnapscreenARSnapViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenClipSharingDelegate.html">SnapscreenClipSharingDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/SnapscreenKitDelegate.html">SnapscreenKitDelegate</a>
@@ -201,7 +231,7 @@
             <h1>SnapscreenWebSearchService</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">SnapscreenWebSearchService</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">SnapscreenWebSearchService</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                 </div>
               </div>
@@ -236,7 +266,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="nf">searchSitesForSnapscreenTvChannelCode</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">tvChannelCode</span>
                                 <span class="nf">query</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">query</span>
                             <span class="nf">timestamp</span><span class="p">:(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="nv">timestampRef</span>
@@ -251,7 +281,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">searchSites</span><span class="p">(</span><span class="n">forSnapscreenTvChannelCode</span> <span class="nv">tvChannelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">timestamp</span> <span class="nv">timestampRef</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/SnapscreenWebSearchResponse.html">SnapscreenWebSearchResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">searchSites</span><span class="p">(</span><span class="n">forSnapscreenTvChannelCode</span> <span class="nv">tvChannelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">timestamp</span> <span class="nv">timestampRef</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/SnapscreenWebSearchResponse.html">SnapscreenWebSearchResponse</a></span><span class="o">&lt;</span><span class="kt">NSArray</span><span class="o">&gt;</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -267,8 +297,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The channel code of the TV channel you want to search for (this needs to be the Snapscreen-specific channel code that can be retrieved as channelCode from <code>SnapscreenTvChannel</code>)</p>
-
+                                  <p>The channel code of the TV channel you want to search for (this needs to be the Snapscreen-specific channel code that can be retrieved as channelCode from <code><a href="../Classes/SnapscreenTvChannel.html">SnapscreenTvChannel</a></code>)</p>
                                 </div>
                               </td>
                             </tr>
@@ -281,7 +310,6 @@
                               <td>
                                 <div>
                                   <p>Any custom search query</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -293,8 +321,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Unit timestamp (milliseconds since 1.1.1970) used to identify the program playing on the given channel. Either use the timestamp of a <code>SnapscreenTvSearchResultEntry</code> or <code>[SnapscreenKit sharedSnapscreenKit].currentSnapscreenTimestamp</code> for the current time</p>
-
+                                  <p>Unit timestamp (milliseconds since 1.1.1970) used to identify the program playing on the given channel. Either use the timestamp of a <code><a href="../Classes/SnapscreenTvSearchResultEntry.html">SnapscreenTvSearchResultEntry</a></code> or <code>[SnapscreenKit sharedSnapscreenKit].currentSnapscreenTimestamp</code> for the current time</p>
                                 </div>
                               </td>
                             </tr>
@@ -307,7 +334,6 @@
                               <td>
                                 <div>
                                   <p>The page for which to fetch results for</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -320,7 +346,6 @@
                               <td>
                                 <div>
                                   <p>Page size you want to retrieve (always use the same size if you implemented multiple page fetching)</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -333,7 +358,6 @@
                               <td>
                                 <div>
                                   <p>The completion block when the operation finishes or fails. Always called on the main thread.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -363,7 +387,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="nf">searchImagesForSnapscreenTvChannelCode</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">tvChannelCode</span>
                                  <span class="nf">query</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">query</span>
                              <span class="nf">timestamp</span><span class="p">:(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="nv">timestampRef</span>
@@ -378,7 +402,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">searchImages</span><span class="p">(</span><span class="n">forSnapscreenTvChannelCode</span> <span class="nv">tvChannelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">timestamp</span> <span class="nv">timestampRef</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/SnapscreenWebSearchResponse.html">SnapscreenWebSearchResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">searchImages</span><span class="p">(</span><span class="n">forSnapscreenTvChannelCode</span> <span class="nv">tvChannelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">timestamp</span> <span class="nv">timestampRef</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/SnapscreenWebSearchResponse.html">SnapscreenWebSearchResponse</a></span><span class="o">&lt;</span><span class="kt">NSArray</span><span class="o">&gt;</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -394,8 +418,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The channel code of the TV channel you want to search for (this needs to be the Snapscreen-specific channel code that can be retrieved as channelCode from <code>SnapscreenTvChannel</code>)</p>
-
+                                  <p>The channel code of the TV channel you want to search for (this needs to be the Snapscreen-specific channel code that can be retrieved as channelCode from <code><a href="../Classes/SnapscreenTvChannel.html">SnapscreenTvChannel</a></code>)</p>
                                 </div>
                               </td>
                             </tr>
@@ -408,7 +431,6 @@
                               <td>
                                 <div>
                                   <p>Any custom search query</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -420,8 +442,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Unit timestamp (milliseconds since 1.1.1970) used to identify the program playing on the given channel. Either use the timestamp of a <code>SnapscreenTvSearchResultEntry</code> or <code>[SnapscreenKit sharedSnapscreenKit].currentSnapscreenTimestamp</code> for the current time</p>
-
+                                  <p>Unit timestamp (milliseconds since 1.1.1970) used to identify the program playing on the given channel. Either use the timestamp of a <code><a href="../Classes/SnapscreenTvSearchResultEntry.html">SnapscreenTvSearchResultEntry</a></code> or <code>[SnapscreenKit sharedSnapscreenKit].currentSnapscreenTimestamp</code> for the current time</p>
                                 </div>
                               </td>
                             </tr>
@@ -434,7 +455,6 @@
                               <td>
                                 <div>
                                   <p>The page for which to fetch results for</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -447,7 +467,6 @@
                               <td>
                                 <div>
                                   <p>Page size you want to retrieve (always use the same size if you implemented multiple page fetching)</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -460,7 +479,6 @@
                               <td>
                                 <div>
                                   <p>The completion block when the operation finishes or fails. Always called on the main thread.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -490,7 +508,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="nf">searchVideosForSnapscreenTvChannelCode</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">tvChannelCode</span>
                                  <span class="nf">query</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">query</span>
                              <span class="nf">timestamp</span><span class="p">:(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="nv">timestampRef</span>
@@ -505,7 +523,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">searchVideos</span><span class="p">(</span><span class="n">forSnapscreenTvChannelCode</span> <span class="nv">tvChannelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">timestamp</span> <span class="nv">timestampRef</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/SnapscreenWebSearchResponse.html">SnapscreenWebSearchResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">searchVideos</span><span class="p">(</span><span class="n">forSnapscreenTvChannelCode</span> <span class="nv">tvChannelCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">timestamp</span> <span class="nv">timestampRef</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/SnapscreenWebSearchResponse.html">SnapscreenWebSearchResponse</a></span><span class="o">&lt;</span><span class="kt">NSArray</span><span class="o">&gt;</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -521,8 +539,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The channel code of the TV channel you want to search for (this needs to be the Snapscreen-specific channel code that can be retrieved as channelCode from <code>SnapscreenTvChannel</code>)</p>
-
+                                  <p>The channel code of the TV channel you want to search for (this needs to be the Snapscreen-specific channel code that can be retrieved as channelCode from <code><a href="../Classes/SnapscreenTvChannel.html">SnapscreenTvChannel</a></code>)</p>
                                 </div>
                               </td>
                             </tr>
@@ -535,7 +552,6 @@
                               <td>
                                 <div>
                                   <p>Any custom search query</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -547,8 +563,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Unit timestamp (milliseconds since 1.1.1970) used to identify the program playing on the given channel. Either use the timestamp of a <code>SnapscreenTvSearchResultEntry</code> or <code>[SnapscreenKit sharedSnapscreenKit].currentSnapscreenTimestamp</code> for the current time</p>
-
+                                  <p>Unit timestamp (milliseconds since 1.1.1970) used to identify the program playing on the given channel. Either use the timestamp of a <code><a href="../Classes/SnapscreenTvSearchResultEntry.html">SnapscreenTvSearchResultEntry</a></code> or <code>[SnapscreenKit sharedSnapscreenKit].currentSnapscreenTimestamp</code> for the current time</p>
                                 </div>
                               </td>
                             </tr>
@@ -561,7 +576,6 @@
                               <td>
                                 <div>
                                   <p>The page for which to fetch results for</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -574,7 +588,6 @@
                               <td>
                                 <div>
                                   <p>Page size you want to retrieve (always use the same size if you implemented multiple page fetching)</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -587,7 +600,6 @@
                               <td>
                                 <div>
                                   <p>The completion block when the operation finishes or fails. Always called on the main thread.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -605,8 +617,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2018-06-26)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2018-12-02)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

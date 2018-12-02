@@ -71,6 +71,7 @@
 
 @end
 
+/** View Controller for presenting recognized snap results when result is not unique and returns multiple possible matches */
 @interface SnapscreenSnapResultsViewController : UIViewController
 
 @end

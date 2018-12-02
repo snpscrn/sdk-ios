@@ -20,3 +20,10 @@
 
 "Snapscreen_SnapResults_Title" = "Snap Ergebnisse";
 "Snapscreen_SnapResults_Header" = "Bitte wählen Sie das am besten passende Ergebnis";
+
+"Snapscreen_Snap_Button_Title" = "Snap";
+"Snapscreen_ClipShare_Tutorial_GetStarted" = "Get Started";
+"Snapscreen_ClipShare_Trimming_Share" = "Clip teilen";
+"Snapscreen_ClipShare_Error_OK" = "OK";
+"Snapscreen_ClipShare_Share_Error_Title" = "Clip-Erstellung fehlgeschlagen";
+"Snapscreen_ClipShare_Share_Error_Message" = "Während der Erstellung des ausgewählten Clips ist ein Fehler aufgetreten.";

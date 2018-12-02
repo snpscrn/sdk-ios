@@ -1,12 +1,6 @@
 {
   "warnings": [
-    {
-      "file": "/Users/developer/jenkins/workspace/iOS SDK - continuous/SnapscreenKit/SnapscreenSnapResultsViewController.h",
-      "line": 74,
-      "symbol": "SnapscreenSnapResultsViewController",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
-      "warning": "undocumented"
-    }
+
   ],
   "source_directory": "/Users/developer/jenkins/workspace/iOS SDK - continuous"
 }

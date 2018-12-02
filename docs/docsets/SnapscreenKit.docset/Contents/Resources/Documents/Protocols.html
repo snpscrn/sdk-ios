@@ -8,9 +8,13 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
 
+    <a name="//apple_ref/objc/Section/Protocols" class="dashAnchor"></a>
 
     <a title="Protocols  Reference"></a>
 
@@ -19,7 +23,13 @@
         <a class="header-link" href="index.html">
           SnapscreenKit Docs
         </a>
-         (99% documented)
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
       </p>
     
     
@@ -62,6 +72,21 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/SnapscreenAdvertisementSearchResultEntry.html">SnapscreenAdvertisementSearchResultEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SnapscreenClipShareInformation.html">SnapscreenClipShareInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SnapscreenClipSharingConfiguration.html">SnapscreenClipSharingConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SnapscreenClipSharingNavigationController.html">SnapscreenClipSharingNavigationController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SnapscreenClipSharingTutorialContent.html">SnapscreenClipSharingTutorialContent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SnapscreenClipSharingViewController.html">SnapscreenClipSharingViewController</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/SnapscreenCustomerConfiguration.html">SnapscreenCustomerConfiguration</a>
@@ -155,13 +180,16 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/SnapscreenARViewFinderMode.html">SnapscreenARViewFinderMode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/SnapscreenErrorCode.html">SnapscreenErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SnapscreenSearchType.html">SnapscreenSearchType</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/SnapscreenWebSearchResultType.html">SnapscreenWebSearchResultType</a>
@@ -173,6 +201,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/SnapscreenARSnapViewControllerDelegate.html">SnapscreenARSnapViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SnapscreenClipSharingDelegate.html">SnapscreenClipSharingDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/SnapscreenKitDelegate.html">SnapscreenKitDelegate</a>
@@ -210,9 +241,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(pl)SnapscreenARSnapViewControllerDelegate"></a>
-                    <a name="//apple_ref/objc/Protocol/SnapscreenARSnapViewControllerDelegate" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SnapscreenARSnapViewControllerDelegate">SnapscreenARSnapViewControllerDelegate</a>
+                    <a name="/c:objc(pl)SnapscreenLoggingHandler"></a>
+                    <a name="//apple_ref/objc/Protocol/SnapscreenLoggingHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SnapscreenLoggingHandler">SnapscreenLoggingHandler</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -220,57 +251,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Provides callbacks from the SnapscreenARSnapViewController during the snapping process</p>
+                        <p>SnapscreenLoggingHandler offers an interface to receive log messages from SnapscreenKit in your application and connect logging to a custom logging framework of your choice.</p>
 
-                        <a href="Protocols/SnapscreenARSnapViewControllerDelegate.html" class="slightly-smaller">See more</a>
+                        <a href="Protocols/SnapscreenLoggingHandler.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">SnapscreenARSnapViewControllerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SnapscreenLoggingHandler</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">SnapscreenARSnapViewControllerDelegate</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(pl)SnapscreenKitDelegate"></a>
-                    <a name="//apple_ref/objc/Protocol/SnapscreenKitDelegate" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SnapscreenKitDelegate">SnapscreenKitDelegate</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Delegate for important callbacks of SnapscreenKit. Implement this to listen for any issues that might make SnapscreenKit unavailable in your application.</p>
-
-                        <a href="Protocols/SnapscreenKitDelegate.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">SnapscreenKitDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">SnapscreenKitDelegate</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SnapscreenLoggingHandler</span></code></pre>
 
                         </div>
                       </div>
@@ -305,12 +299,12 @@ if your application already tracks user location in order to improve result qual
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">SnapscreenLocationProvider</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SnapscreenLocationProvider</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">SnapscreenLocationProvider</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SnapscreenLocationProvider</span></code></pre>
 
                         </div>
                       </div>
@@ -324,9 +318,9 @@ if your application already tracks user location in order to improve result qual
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(pl)SnapscreenLoggingHandler"></a>
-                    <a name="//apple_ref/objc/Protocol/SnapscreenLoggingHandler" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SnapscreenLoggingHandler">SnapscreenLoggingHandler</a>
+                    <a name="/c:objc(pl)SnapscreenClipSharingDelegate"></a>
+                    <a name="//apple_ref/objc/Protocol/SnapscreenClipSharingDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SnapscreenClipSharingDelegate">SnapscreenClipSharingDelegate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -334,20 +328,20 @@ if your application already tracks user location in order to improve result qual
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>SnapscreenLoggingHandler offers an interface to receive log messages from SnapscreenKit in your application and connect logging to a custom logging framework of your choice.</p>
+                        <p>Delegate for callbacks during the clip sharing process.</p>
 
-                        <a href="Protocols/SnapscreenLoggingHandler.html" class="slightly-smaller">See more</a>
+                        <a href="Protocols/SnapscreenClipSharingDelegate.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">SnapscreenLoggingHandler</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SnapscreenClipSharingDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">SnapscreenLoggingHandler</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SnapscreenClipSharingDelegate</span></code></pre>
 
                         </div>
                       </div>
@@ -379,12 +373,49 @@ if your application already tracks user location in order to improve result qual
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">SnapscreenSnapResultsViewControllerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SnapscreenSnapResultsViewControllerDelegate</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">SnapscreenSnapResultsViewControllerDelegate</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SnapscreenSnapResultsViewControllerDelegate</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SnapscreenARSnapViewControllerDelegate"></a>
+                    <a name="//apple_ref/objc/Protocol/SnapscreenARSnapViewControllerDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SnapscreenARSnapViewControllerDelegate">SnapscreenARSnapViewControllerDelegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provides callbacks from the SnapscreenARSnapViewController during the snapping process</p>
+
+                        <a href="Protocols/SnapscreenARSnapViewControllerDelegate.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SnapscreenARSnapViewControllerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SnapscreenARSnapViewControllerDelegate</span></code></pre>
 
                         </div>
                       </div>
@@ -416,12 +447,49 @@ if your application already tracks user location in order to improve result qual
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">SnapscreenSnapViewControllerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SnapscreenSnapViewControllerDelegate</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">SnapscreenSnapViewControllerDelegate</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SnapscreenSnapViewControllerDelegate</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SnapscreenKitDelegate"></a>
+                    <a name="//apple_ref/objc/Protocol/SnapscreenKitDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SnapscreenKitDelegate">SnapscreenKitDelegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delegate for important callbacks of SnapscreenKit. Implement this to listen for any issues that might make SnapscreenKit unavailable in your application.</p>
+
+                        <a href="Protocols/SnapscreenKitDelegate.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SnapscreenKitDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SnapscreenKitDelegate</span></code></pre>
 
                         </div>
                       </div>
@@ -436,8 +504,8 @@ if your application already tracks user location in order to improve result qual
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2018-06-26)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2018-12-02)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

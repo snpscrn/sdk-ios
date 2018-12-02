@@ -1,10 +1,3 @@
-## Documentation
-
-For the full API documentation go to https://snpscrn.github.io/sdk-ios
-
-## Support
-In case of any questions or problems please contact us at [support@snapscreen.com](mailto:support@snapscreen.com).
-
 ## Requirements
 
 SnapscreenKit requires at least iOS 8.
@@ -97,6 +90,7 @@ The SnapscreenSnapViewController will send callbacks to the delegate you pass an
 
 ## Snapping Sports content
 
+
 In order to snap a TV image and search for Sports content via SnapscreenKit, you need to first retrieve a SnapscreenSnapViewController by calling
 
 ```
@@ -114,10 +108,10 @@ Once you have retrieved the view controller, it's best to present it modally ins
 
 The SnapscreenSnapViewController will send callbacks to the delegate you pass and you are responsible for dismissing the ViewController once it's no longer needed. The ViewController does not dismiss itself in any situation. The **SnapscreenSearchResult** you receive from the delegate callback will have the sportEventSearchResult set when the search is successful.
 
-
 The following sequence diagram shows the flow between your app, the SDK and the Snapscreen backend.
 
 ![Sequence Diagram showing flow between app, SDK and Snapscreen backend](docs/sequence_diagram_sports.png "Sequence Diagram showing flow between app, SDK and Snapscreen backend")
+
 
 ## Snapping Advertising content
 
@@ -179,6 +173,23 @@ SnapscreenKit also offers you the ability to provide AR-like experiences that al
 ```
 
 The delegate provides you with callbacks with a view that you may add your custom drawing logic to and provides callbacks when results are found and lost in the live camera view including details about the result as well as an exact position in screen coordinates.
+
+## Sharing Clips
+
+In order to snap a TV image, let the user trim a given video clip around the snap timestamp and share this clip via SnapscreenKit, you need to instantiate a SnapscreenClipSharingNavigationController or SnapscreenClipSharingViewController.
+
+We recommend using the SnapscreenClipSharingNavigationController and presenting it modally in your modally.
+
+```
+SnapscreenClipSharingConfiguration* configuration = [SnapscreenClipSharingConfiguration new];
+
+// Set appropriate configuration properties
+
+SnapscreenClipSharingNavigationController* sharingNavigationController = [[SnapscreenClipSharingNavigationController alloc] initWithConfiguration: configuration delegate: self];
+```
+
+The ViewController will send callbacks to the delegate you pass and you are responsible for dismissing the ViewController once it's no longer needed. The ViewController does not dismiss itself in any situation. The **SnapscreenClipShareInformation** you receive from the delegate callback will have the necessary information about the clip a user wants to share.
+
 
 ## Support
 

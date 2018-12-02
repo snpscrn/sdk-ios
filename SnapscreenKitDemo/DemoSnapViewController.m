@@ -10,7 +10,7 @@
 #import <SnapscreenKit/SnapscreenKit.h>
 #import "SampleSnapQuadrangleResultView.h"
 
-@interface DemoSnapViewController ()<SnapscreenSnapViewControllerDelegate, SnapscreenSnapResultsViewControllerDelegate, SnapscreenARSnapViewControllerDelegate>
+@interface DemoSnapViewController ()<SnapscreenSnapViewControllerDelegate, SnapscreenSnapResultsViewControllerDelegate, SnapscreenARSnapViewControllerDelegate, SnapscreenClipSharingDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 
 @property (nonatomic, strong) SampleSnapQuadrangleResultView* quadrangleView;
@@ -175,6 +175,22 @@
     [self showARWithConfiguration: configuration];
 }
 
+- (IBAction) startClipSharing: (id) sender {
+    // Explicitly remove user defaults value for tutorial to force presentation of tutorial
+    [[NSUserDefaults standardUserDefaults] setBool: NO forKey: SnapscreenSDK_ClipSharingTutorialSeenUserDefaultsKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    SnapscreenClipSharingConfiguration* configuration = [SnapscreenClipSharingConfiguration new];
+    configuration.largeSponsorImage = [UIImage imageNamed: @"sponsor_sample"];
+    configuration.tutorialContent = @[[SnapscreenClipSharingTutorialContent contentWithImage: [UIImage imageNamed: @"tutorial_sample"] text: @"Point and scan your screen"],
+                                      [SnapscreenClipSharingTutorialContent contentWithImage: [UIImage imageNamed: @"tutorial_sample"] text: @"Edit your clip"]];
+    
+    configuration.sharingIntroductionHintImage = [UIImage imageNamed: @"tutorial_sample"];
+    configuration.sharingIntroductionHint = [[NSAttributedString alloc] initWithString: @"Edit your clip\nGo back and forth in time,\nadjust your clip length, preview and\ntap Share Clip when you're happy with it" attributes: @{NSForegroundColorAttributeName : configuration.mainButtonColor, NSFontAttributeName : configuration.tutorialFont}];
+    
+    [self presentViewController: [[SnapscreenClipSharingNavigationController alloc] initWithConfiguration: configuration delegate: self] animated: YES completion: nil];
+}
+
 - (void) snapscreenARViewController: (SnapscreenARSnapViewController* _Nonnull) snapViewController didPrepareDrawingView: (UIView*) drawingView {
     [drawingView addSubview: self.quadrangleView];
     [drawingView addSubview: self.resultPanel];
@@ -307,6 +323,18 @@
     self.resultPanel = nil;
     self.resultLinkLabel = nil;
     self.arViewController = nil;
+}
+
+- (void)clipSharingViewControllerDidCancel:(SnapscreenClipSharingViewController *)sharingViewController {
+    [sharingViewController dismissViewControllerAnimated: YES completion: nil];
+}
+
+- (void)clipSharingViewController:(SnapscreenClipSharingViewController *)sharingViewController didShareVideoSnippet:(SnapscreenClipShareInformation *)shareInformation {
+    __weak DemoSnapViewController* me = self;
+    [sharingViewController dismissViewControllerAnimated: YES completion:^{
+        UIActivityViewController* activityViewController = [[UIActivityViewController alloc] initWithActivityItems: @[shareInformation.videoPlayerURL] applicationActivities: nil];
+        [me presentViewController: activityViewController animated: YES completion: nil];
+    }];
 }
 
 @end

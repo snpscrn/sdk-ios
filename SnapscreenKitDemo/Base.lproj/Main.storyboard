@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SAb-gg-Srh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SAb-gg-Srh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -135,6 +134,13 @@
                                     <action selector="startNewAdARSnap:" destination="fYn-Wa-w3D" eventType="touchUpInside" id="WXT-Pz-fe3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGA-k2-OUb">
+                                <rect key="frame" x="134.5" y="240" width="106" height="30"/>
+                                <state key="normal" title="TV Clip Sharing"/>
+                                <connections>
+                                    <action selector="startClipSharing:" destination="fYn-Wa-w3D" eventType="touchUpInside" id="Zsb-To-2v9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -142,7 +148,9 @@
                             <constraint firstItem="Mst-fK-4Lb" firstAttribute="top" secondItem="VjC-G6-IcK" secondAttribute="bottom" constant="25" id="6gV-D6-BFJ"/>
                             <constraint firstItem="Mst-fK-4Lb" firstAttribute="leading" secondItem="6fI-Xk-RMA" secondAttribute="leadingMargin" constant="16" id="7CX-rt-r7b"/>
                             <constraint firstItem="k9t-CZ-lFR" firstAttribute="centerX" secondItem="6fI-Xk-RMA" secondAttribute="centerX" id="7tR-0a-Rrt"/>
-                            <constraint firstItem="sNi-oo-bJO" firstAttribute="top" secondItem="mkq-Xa-QmG" secondAttribute="bottom" constant="95" id="8rL-Wp-jaK"/>
+                            <constraint firstItem="sNi-oo-bJO" firstAttribute="top" secondItem="NGA-k2-OUb" secondAttribute="bottom" constant="40" id="8rL-Wp-jaK"/>
+                            <constraint firstItem="NGA-k2-OUb" firstAttribute="top" secondItem="mkq-Xa-QmG" secondAttribute="bottom" constant="25" id="9JP-sI-PvZ"/>
+                            <constraint firstItem="NGA-k2-OUb" firstAttribute="centerX" secondItem="6fI-Xk-RMA" secondAttribute="centerX" id="B8a-jk-6ch"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oYJ-8y-Rr6" secondAttribute="trailing" id="Cro-sW-HhX"/>
                             <constraint firstAttribute="trailing" secondItem="sNi-oo-bJO" secondAttribute="trailing" constant="32" id="G7b-D2-20m"/>
                             <constraint firstItem="k9t-CZ-lFR" firstAttribute="top" secondItem="j8X-nQ-ehE" secondAttribute="bottom" constant="8" id="HzZ-w6-mMr"/>
