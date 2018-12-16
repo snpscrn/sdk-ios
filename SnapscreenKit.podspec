@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SnapscreenKit"
-  s.version      = '1.0.11'
+  s.version      = '1.0.12'
   s.summary          = "iOS SDK for Snapscreen"
   s.homepage     = "https://github.com/snpscrn/sdk-ios"
   s.author       = { "Snapscreen" => "office@snapscreen.com" }
