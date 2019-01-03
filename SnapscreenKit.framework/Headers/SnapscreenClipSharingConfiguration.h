@@ -25,9 +25,6 @@ NS_ASSUME_NONNULL_BEGIN
 /** Large sponsor image that is displayed */
 @property (nonatomic, strong, nullable) UIImage* largeSponsorImage;
 
-/** Small sponsor image that is displayed on the trimming UI if an introduction hint is displayed */
-@property (nonatomic, strong, nullable) UIImage* smallSponsorImage;
-
 /** Image that is displayed as the background in the tutorial - if nil a white screen is shown */
 @property (nonatomic, strong, nullable) UIImage* tutorialBackgroundImage;
 
@@ -63,6 +60,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Image for the sharing introduction hint - displayed briefly on the trimming UI before switching to large sponsor image */
 @property (nonatomic, strong, nullable) UIImage* sharingIntroductionHintImage;
+
+/** Maximum Height constraint that is applied to the sponsor image - defaults to -1 which means that the full image height is used */
+@property (nonatomic, assign) CGFloat maximumSponsorImageHeight;
 
 @end
 
