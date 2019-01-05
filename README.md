@@ -198,6 +198,7 @@ SnapscreenClipSharingNavigationController* sharingNavigationController = [[Snaps
 
 The ViewController will send callbacks to the delegate you pass and you are responsible for dismissing the ViewController once it's no longer needed. The ViewController does not dismiss itself in any situation. The **SnapscreenClipShareInformation** you receive from the delegate callback will have the necessary information about the clip a user wants to share.
 
+The tutorial is shown the first time the users opens clip sharing. After that first time, the user defaults value with the key SnapscreenSDK_ClipSharingTutorialSeenUserDefaultsKey (value "SnapscreenSDK_ClipSharing_Tutorial_Seen") is set to true to indicate that the user has seen the tutorial and it should not be shown again. You can explicitly set this user defaults value on your own to control if the tutorial should be shown or not.
 
 ## Support
 
