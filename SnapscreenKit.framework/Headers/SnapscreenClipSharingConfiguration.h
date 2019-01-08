@@ -22,6 +22,12 @@ NS_ASSUME_NONNULL_BEGIN
 /** Content to be displayed in the tutorial */
 @property (nonatomic, strong) NSArray<SnapscreenClipSharingTutorialContent*>* tutorialContent;
 
+/** Optional logo that is displayed above the tutorial content (and does not scroll with the tutorial content) */
+@property (nonatomic, strong, nullable) UIImage* tutorialLogoImage;
+
+/** Maximum Height constraint that is applied to the tutorial logo image on the tutorial page - defaults to -1 which means that the full image height is used */
+@property (nonatomic, assign) CGFloat maximumTutorialLogoImageHeight;
+
 /** Large sponsor image that is displayed */
 @property (nonatomic, strong, nullable) UIImage* largeSponsorImage;
 
