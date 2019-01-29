@@ -106,9 +106,6 @@
                 <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)SnapscreenNSLogLoggingHandler">SnapscreenNSLogLoggingHandler</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/SnapscreenPageMetadata.html">SnapscreenPageMetadata</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/SnapscreenResultQuadrangle.html">SnapscreenResultQuadrangle</a>
               </li>
               <li class="nav-group-task">
@@ -147,24 +144,6 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/SnapscreenTvSearchResultEntry.html">SnapscreenTvSearchResultEntry</a>
               </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/SnapscreenWebSearchImageResult.html">SnapscreenWebSearchImageResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/SnapscreenWebSearchResponse.html">SnapscreenWebSearchResponse</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/SnapscreenWebSearchResult.html">SnapscreenWebSearchResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/SnapscreenWebSearchService.html">SnapscreenWebSearchService</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/SnapscreenWebSearchSiteResult.html">SnapscreenWebSearchSiteResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/SnapscreenWebSearchVideoResult.html">SnapscreenWebSearchVideoResult</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -189,9 +168,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/SnapscreenSearchType.html">SnapscreenSearchType</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Enums/SnapscreenWebSearchResultType.html">SnapscreenWebSearchResultType</a>
               </li>
             </ul>
           </li>
@@ -326,18 +302,6 @@ SnapscreenSnapViewController* snapViewController = [[SnapscreenKit sharedSnapscr
 <h2 id='displaying-and-selecting-snap-results' class='heading'>Displaying and Selecting Snap Results</h2>
 
 <p>When snapping returns more than a single snap result and the user has multiple results to choose from, the <strong>SnapscreenSnapResultsViewController</strong> is automatically pushed onto the navigation stack. You can pass an optional resultsDelegate when instantiating the SnapViewController (see above) that implements the <strong>SnapscreenSnapResultsViewControllerDelegate</strong> protocol to control and customize how the results are displayed. This is optional and SnapscreenKit provides a default implementation. The <strong>SnapscreenSnapResultsViewControllerDelegate</strong> provides you with a callback that delivers the result entry that the user selected.</p>
-<h2 id='web-search' class='heading'>Web Search</h2>
-
-<p>In order to perform a web search, you simply call the corresponding method for the result type you want to get on the SnapscreenWebSearchService that you can retrieve from SnapscreenKit:</p>
-<pre class="highlight plaintext"><code>[[SnapscreenKit sharedSnapscreenKit].webSearchService searchSitesForSnapscreenTvChannelCode: &lt;channelCode&gt; query: @"&lt;your search query&gt;" timestamp: [SnapscreenKit sharedSnapscreenKit].currentSnapscreenTimestamp page: 0 size: 20 completion:(void (^_Nonnull)(SnapscreenWebSearchResponse&lt;NSArray&lt;SnapscreenWebSearchSiteResult*&gt;*&gt;* _Nullable response)) completionBlock {
-        //Response object contains results, metadata and optional error if something went wrong
-    }];
-</code></pre>
-
-<p>In case there are multiple pages of results (which is most likely the case), you simply pass the corresponding page number in the method call.</p>
-<h2 id='displaying-web-search-results' class='heading'>Displaying Web Search Results</h2>
-
-<p>When you are displaying a web search result, you need to use the <strong>visitURL</strong> of the corresponding SnapscreenWebSearchResult to resolve the actual result page and also have Snapscreen track the visit to this result. This is necessary to correctly provide feedback to Snapscreen in order to provide ranking and priorization for the web results.</p>
 <h2 id='localization' class='heading'>Localization</h2>
 
 <p>If you want, you can customize several messages that are shown in the UI by overriding the Localization keys defined in SnapscreenKit.bundle in your own Localizable.strings files.</p>
@@ -370,7 +334,8 @@ SnapscreenClipSharingNavigationController* sharingNavigationController = [[Snaps
 </code></pre>
 
 <p>The ViewController will send callbacks to the delegate you pass and you are responsible for dismissing the ViewController once it&rsquo;s no longer needed. The ViewController does not dismiss itself in any situation. The <strong>SnapscreenClipShareInformation</strong> you receive from the delegate callback will have the necessary information about the clip a user wants to share.</p>
-<p>The tutorial is shown the first time the users opens clip sharing. After that first time, the user defaults value with the key SnapscreenSDK_ClipSharingTutorialSeenUserDefaultsKey (value "SnapscreenSDK_ClipSharing_Tutorial_Seen") is set to true to indicate that the user has seen the tutorial and it should not be shown again. You can explicitly set this user defaults value on your own to control if the tutorial should be shown or not.</p>
+
+<p>The tutorial is shown the first time the users opens clip sharing. After that first time, the user defaults value with the key SnapscreenSDK_ClipSharingTutorialSeenUserDefaultsKey (value <q>SnapscreenSDK_ClipSharing_Tutorial_Seen</q>) is set to true to indicate that the user has seen the tutorial and it should not be shown again. You can explicitly set this user defaults value on your own to control if the tutorial should be shown or not.</p>
 <h2 id='support' class='heading'>Support</h2>
 
 <p>In case of any questions or problems please contact us at <a href="mailto:support@snapscreen.com">support@snapscreen.com</a>.</p>
@@ -382,7 +347,7 @@ SnapscreenClipSharingNavigationController* sharingNavigationController = [[Snaps
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2019-01-05)</p>
+      <p>&copy; 2019 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2019-01-29)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

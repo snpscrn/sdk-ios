@@ -29,14 +29,6 @@
 #import "SnapscreenSportEvent.h"
 #import "SnapscreenSportEventCompetitor.h"
 
-#import "SnapscreenWebSearchService.h"
-#import "SnapscreenPageMetadata.h"
-#import "SnapscreenWebSearchResponse.h"
-#import "SnapscreenWebSearchResult.h"
-#import "SnapscreenWebSearchSiteResult.h"
-#import "SnapscreenWebSearchImageResult.h"
-#import "SnapscreenWebSearchVideoResult.h"
-
 #import "SnapscreenResultQuadrangle.h"
 
 #import "SnapscreenARSnapViewController.h"
@@ -195,12 +187,6 @@ SnapscreenKit offers integration of the Snapscreen functions in your app. Before
  */
 - (SnapscreenARSnapViewController* _Nullable) instantiateARSnapscreenSnapViewControllerWithDelegate: (id<SnapscreenARSnapViewControllerDelegate> _Nonnull) delegate configuration: (SnapscreenSnapConfiguration* _Nonnull) snapConfiguration;
 
-/** 
- 
- Service for performing web searches based on snap results
- 
- */
-@property (readonly, nullable) SnapscreenWebSearchService* webSearchService;
 
 @end
 
