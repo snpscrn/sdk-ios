@@ -110,7 +110,7 @@ The SnapscreenSnapViewController will send callbacks to the delegate you pass an
 
 The following sequence diagram shows the flow between your app, the SDK and the Snapscreen backend.
 
-![Sequence Diagram showing flow between app, SDK and Snapscreen backend](sequence_diagram_sports.png "Sequence Diagram showing flow between app, SDK and Snapscreen backend")
+![Sequence Diagram showing flow between app, SDK and Snapscreen backend](docs/sequence_diagram_sports.png "Sequence Diagram showing flow between app, SDK and Snapscreen backend")
 
 
 ## Snapping Advertising content
