@@ -1,6 +1,6 @@
 ## Requirements
 
-SnapscreenKit requires at least iOS 8.
+SnapscreenKit requires at least **iOS 10**.
 
 ## Integrating SnapscreenKit
 
