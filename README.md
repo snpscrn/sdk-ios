@@ -7,7 +7,7 @@ In case of any questions or problems please contact us at [support@snapscreen.co
 
 ## Requirements
 
-SnapscreenKit requires at least iOS 8.
+SnapscreenKit requires at least **iOS 10**.
 
 ## Integrating SnapscreenKit
 
