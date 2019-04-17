@@ -183,6 +183,17 @@ The ViewController will send callbacks to the delegate you pass and you are resp
 
 The tutorial is shown the first time the users opens clip sharing. After that first time, the user defaults value with the key SnapscreenSDK_ClipSharingTutorialSeenUserDefaultsKey (value "SnapscreenSDK_ClipSharing_Tutorial_Seen") is set to true to indicate that the user has seen the tutorial and it should not be shown again. You can explicitly set this user defaults value on your own to control if the tutorial should be shown or not.
 
+### Asset guidelines
+
+We recommend the following minimum heights for the images that can be provided. Please note that the sizes are provided in 1x scale - so you need to provide according images in higher for high-resolution devices as well. Also note that the SDK configuration interface allows to programmatically limit the heights of the images so you can manually optimize the layout for various device sizes.
+
+* tutorialLogoImage: no recommendation
+* largeSponsorImage: 150px
+* smallSponsorImage: 50px
+* tutorialBackgroundImage: iPhone height
+* sharingIntroductionHintImage: 50px
+* tutorialContent Images: at least 400px
+
 ## Support
 
 In case of any questions or problems please contact us at [support@snapscreen.com](mailto:support@snapscreen.com).
