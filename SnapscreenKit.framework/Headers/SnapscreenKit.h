@@ -47,6 +47,8 @@
 #import "SnapscreenNSLogLoggingHandler.h"
 #import "SnapscreenCustomerConfiguration.h"
 
+#import "SnapscreenSnapper.h"
+
 #import "SnapscreenSearchType.h"
 
 #import "SnapscreenKitDelegate.h"
@@ -84,7 +86,7 @@ SnapscreenKit offers integration of the Snapscreen functions in your app. Before
  @param clientSecret The client secret of your application - provided by Snapscreen
  @param connectToTestEnvironment Whether you want SnapscreenKit connect to the test environment of Snapscreen. Pass NO for production use in Release Builds.
  @param backendURL The URL string for the standard Snapscreen backend - if nil uses the default URL based on the environment
- @param clipSharingBackendURL The URL string for the Snapscreen clip sharing backend - if nil uses the default URL based on the environment
+ @param clipsharingBackendURL The URL string for the Snapscreen clip sharing backend - if nil uses the default URL based on the environment
  @param loggingHandler An optional logging handler. Pass if you want to receive log messages from SnapscreenKit in your application and attach them to your custom logging solution. For logging to NSLog there is a default implementation in `SnapscreenNSLogLoggingHandler`
  @param locationProvider An optional location provider. If your application determines the user's location in some way, provide this and SnapscreenKit will also use the user's location to improve result quality.
  @param delegate The SnapscreenKit delegate
@@ -177,6 +179,13 @@ SnapscreenKit offers integration of the Snapscreen functions in your app. Before
 @property (readonly, strong, nonatomic, nullable) SnapscreenCustomerConfiguration* customerConfiguration;
 
 /**
+
+ Snapper to access a direct snapping and quadrangle detection API.
+
+ */
+@property (readonly, strong, nonatomic, nonnull) SnapscreenSnapper* snapper;
+
+/**
  
  Initializes a UIViewController for performing Snaps of Live TV. Should be presented as a modal UIViewController in your application for best experience.
  
@@ -200,7 +209,6 @@ SnapscreenKit offers integration of the Snapscreen functions in your app. Before
  
  */
 - (SnapscreenARSnapViewController* _Nullable) instantiateARSnapscreenSnapViewControllerWithDelegate: (id<SnapscreenARSnapViewControllerDelegate> _Nonnull) delegate configuration: (SnapscreenSnapConfiguration* _Nonnull) snapConfiguration;
-
 
 @end
 

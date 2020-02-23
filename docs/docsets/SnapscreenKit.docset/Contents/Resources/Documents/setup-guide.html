@@ -124,6 +124,9 @@
                 <a class="nav-group-task-link" href="Classes/SnapscreenSnapViewController.html">SnapscreenSnapViewController</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SnapscreenSnapper.html">SnapscreenSnapper</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/SnapscreenSportEvent.html">SnapscreenSportEvent</a>
               </li>
               <li class="nav-group-task">
@@ -195,6 +198,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/SnapscreenSnapViewControllerDelegate.html">SnapscreenSnapViewControllerDelegate</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SnapscreenSnapperDelegate.html">SnapscreenSnapperDelegate</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -204,9 +210,15 @@
         <section class="section">
           <div class="section-content">
             
-            <h2 id='requirements' class='heading'>Requirements</h2>
+            <h2 id='documentation' class='heading'>Documentation</h2>
 
-<p>SnapscreenKit requires at least iOS 8.</p>
+<p>For the full API documentation go to <a href="https://snpscrn.github.io/sdk-ios">https://snpscrn.github.io/sdk-ios</a></p>
+<h2 id='support' class='heading'>Support</h2>
+
+<p>In case of any questions or problems please contact us at <a href="mailto:support@snapscreen.com">support@snapscreen.com</a>.</p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<p>SnapscreenKit requires at least <strong>iOS 10</strong>.</p>
 <h2 id='integrating-snapscreenkit' class='heading'>Integrating SnapscreenKit</h2>
 <h3 id='via-cocoapods' class='heading'>via CocoaPods</h3>
 
@@ -334,8 +346,38 @@ SnapscreenClipSharingNavigationController* sharingNavigationController = [[Snaps
 </code></pre>
 
 <p>The ViewController will send callbacks to the delegate you pass and you are responsible for dismissing the ViewController once it&rsquo;s no longer needed. The ViewController does not dismiss itself in any situation. The <strong>SnapscreenClipShareInformation</strong> you receive from the delegate callback will have the necessary information about the clip a user wants to share.</p>
+<h3 id='letting-snapscreenkit-know-about-the-result-of-the-sharing-operation' class='heading'>Letting SnapscreenKit know about the result of the sharing operation</h3>
+
+<p><em>Important:</em> Depending on how the user completes the sharing process that you present, call the Methods [SnapscreenClipSharingViewController didCancelSharing] or [SnapscreenClipSharingViewController didShareTo: <platform>] to let SnapscreenKit know about the result.</p>
 
 <p>The tutorial is shown the first time the users opens clip sharing. After that first time, the user defaults value with the key SnapscreenSDK_ClipSharingTutorialSeenUserDefaultsKey (value <q>SnapscreenSDK_ClipSharing_Tutorial_Seen</q>) is set to true to indicate that the user has seen the tutorial and it should not be shown again. You can explicitly set this user defaults value on your own to control if the tutorial should be shown or not.</p>
+<h3 id='asset-guidelines' class='heading'>Asset guidelines</h3>
+
+<p>We recommend the following minimum heights for the images that can be provided. Please note that the sizes are provided in 1x scale - so you need to provide according images in higher for high-resolution devices as well. Also note that the SDK configuration interface allows to programmatically limit the heights of the images so you can manually optimize the layout for various device sizes.</p>
+
+<ul>
+<li>tutorialLogoImage: no recommendation</li>
+<li>largeSponsorImage: 150px</li>
+<li>smallSponsorImage: 50px</li>
+<li>tutorialBackgroundImage: iPhone height</li>
+<li>sharingIntroductionHintImage: 50px</li>
+<li>tutorialContent Images: at least 400px</li>
+</ul>
+<h2 id='integrating-with-arkit' class='heading'>Integrating with ARKit</h2>
+
+<p>The SDK also provides the ability to integrate snapping and quadrangle detection with your own custom UI. To do so, you can use the SnapscreenSnapper which is provided through the class SnapscreenKit. You need to provide a SnapscreenSnapConfiguration to determine which results you are interested in and set the delegate property to your implementation of a SnapscreenSnapperDelegate.</p>
+
+<p>We recommend that you only perform snaps when the user explicitly triggers it via a button or at certain intervals to save memory and CPU time on the user&rsquo;s device.</p>
+
+<p>Most likely you will want to integrate directly with the callbacks provided from the ARSession:</p>
+<pre class="highlight plaintext"><code>- (void)session:(ARSession *)session didUpdateFrame:(ARFrame *)frame {
+    if (shouldPerformSnap) {
+      [[SnapscreenKit sharedSnapscreenKit].snapper performSnapForPixelBuffer: frame.capturedImage timestamp: frame.timestamp];
+    }
+}
+</code></pre>
+
+<p>See ARKitDemoViewController in the demo project for an integration sample.</p>
 <h2 id='support' class='heading'>Support</h2>
 
 <p>In case of any questions or problems please contact us at <a href="mailto:support@snapscreen.com">support@snapscreen.com</a>.</p>
@@ -347,7 +389,7 @@ SnapscreenClipSharingNavigationController* sharingNavigationController = [[Snaps
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2019-01-29)</p>
+      <p>&copy; 2020 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2020-02-23)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

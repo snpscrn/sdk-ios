@@ -11,7 +11,6 @@
 		5B6CC1E21D9A7B97005F69AF /* SnapscreenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6CC1E01D9A7B92005F69AF /* SnapscreenKit.framework */; };
 		5B6CC1E31D9A7B97005F69AF /* SnapscreenKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6CC1E01D9A7B92005F69AF /* SnapscreenKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5B824F061D9A8B2500A8E7DA /* DemoSnapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B824F051D9A8B2500A8E7DA /* DemoSnapViewController.m */; };
-		5B824F091D9A8B2E00A8E7DA /* DemoWebsearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B824F081D9A8B2E00A8E7DA /* DemoWebsearchViewController.m */; };
 		5B824F0B1D9A8D7F00A8E7DA /* SnapscreenKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5B824F0A1D9A8D7F00A8E7DA /* SnapscreenKit.bundle */; };
 		5BA477E71D9A77FE00E30F6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA477E61D9A77FE00E30F6C /* main.m */; };
 		5BA477EA1D9A77FE00E30F6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA477E91D9A77FE00E30F6C /* AppDelegate.m */; };
@@ -19,6 +18,7 @@
 		5BA477F01D9A77FE00E30F6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA477EE1D9A77FE00E30F6C /* Main.storyboard */; };
 		5BA477F21D9A77FE00E30F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BA477F11D9A77FE00E30F6C /* Assets.xcassets */; };
 		5BA477F51D9A77FE00E30F6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA477F31D9A77FE00E30F6C /* LaunchScreen.storyboard */; };
+		5CC61B562402B9F50051C7CC /* ARKitDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC61B552402B9F50051C7CC /* ARKitDemoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,8 +41,6 @@
 		5B6CC1E01D9A7B92005F69AF /* SnapscreenKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapscreenKit.framework; sourceTree = SOURCE_ROOT; };
 		5B824F041D9A8B2500A8E7DA /* DemoSnapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoSnapViewController.h; sourceTree = "<group>"; };
 		5B824F051D9A8B2500A8E7DA /* DemoSnapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoSnapViewController.m; sourceTree = "<group>"; };
-		5B824F071D9A8B2E00A8E7DA /* DemoWebsearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoWebsearchViewController.h; sourceTree = "<group>"; };
-		5B824F081D9A8B2E00A8E7DA /* DemoWebsearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoWebsearchViewController.m; sourceTree = "<group>"; };
 		5B824F0A1D9A8D7F00A8E7DA /* SnapscreenKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SnapscreenKit.bundle; sourceTree = SOURCE_ROOT; };
 		5BA477E21D9A77FE00E30F6C /* SnapscreenKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapscreenKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BA477E61D9A77FE00E30F6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,6 +52,8 @@
 		5BA477F11D9A77FE00E30F6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BA477F41D9A77FE00E30F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BA477F61D9A77FE00E30F6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CC61B542402B9F50051C7CC /* ARKitDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARKitDemoViewController.h; sourceTree = "<group>"; };
+		5CC61B552402B9F50051C7CC /* ARKitDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARKitDemoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +100,10 @@
 				5BA477E51D9A77FE00E30F6C /* Supporting Files */,
 				5B824F041D9A8B2500A8E7DA /* DemoSnapViewController.h */,
 				5B824F051D9A8B2500A8E7DA /* DemoSnapViewController.m */,
-				5B824F071D9A8B2E00A8E7DA /* DemoWebsearchViewController.h */,
-				5B824F081D9A8B2E00A8E7DA /* DemoWebsearchViewController.m */,
 				5B24D1CD1FE40D400002CC01 /* SampleSnapQuadrangleResultView.h */,
 				5B24D1CE1FE40D400002CC01 /* SampleSnapQuadrangleResultView.m */,
+				5CC61B542402B9F50051C7CC /* ARKitDemoViewController.h */,
+				5CC61B552402B9F50051C7CC /* ARKitDemoViewController.m */,
 			);
 			path = SnapscreenKitDemo;
 			sourceTree = "<group>";
@@ -157,6 +157,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -190,11 +191,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B24D1CF1FE40D400002CC01 /* SampleSnapQuadrangleResultView.m in Sources */,
+				5CC61B562402B9F50051C7CC /* ARKitDemoViewController.m in Sources */,
 				5BA477ED1D9A77FE00E30F6C /* ViewController.m in Sources */,
 				5B824F061D9A8B2500A8E7DA /* DemoSnapViewController.m in Sources */,
 				5BA477EA1D9A77FE00E30F6C /* AppDelegate.m in Sources */,
 				5BA477E71D9A77FE00E30F6C /* main.m in Sources */,
-				5B824F091D9A8B2E00A8E7DA /* DemoWebsearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +320,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SnapscreenKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snapscreen.SnapscreenKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -336,6 +338,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SnapscreenKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snapscreen.SnapscreenKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

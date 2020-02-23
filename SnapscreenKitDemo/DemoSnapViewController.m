@@ -9,6 +9,7 @@
 #import "DemoSnapViewController.h"
 #import <SnapscreenKit/SnapscreenKit.h>
 #import "SampleSnapQuadrangleResultView.h"
+#import "ARKitDemoViewController.h"
 
 @interface DemoSnapViewController ()<SnapscreenSnapViewControllerDelegate, SnapscreenSnapResultsViewControllerDelegate, SnapscreenARSnapViewControllerDelegate, SnapscreenClipSharingDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
@@ -189,6 +190,11 @@
     configuration.sharingIntroductionHint = [[NSAttributedString alloc] initWithString: @"Edit your clip\nGo back and forth in time,\nadjust your clip length, preview and\ntap Share Clip when you're happy with it" attributes: @{NSForegroundColorAttributeName : configuration.mainButtonColor, NSFontAttributeName : configuration.tutorialFont}];
     
     [self presentViewController: [[SnapscreenClipSharingNavigationController alloc] initWithConfiguration: configuration delegate: self] animated: YES completion: nil];
+}
+
+- (IBAction)startARKitSnapping:(id)sender {
+    UINavigationController* arKitSnapViewController = [[UINavigationController alloc] initWithRootViewController: [ARKitDemoViewController new]];
+    [self presentViewController: arKitSnapViewController animated: YES completion: nil];
 }
 
 - (void) snapscreenARViewController: (SnapscreenARSnapViewController* _Nonnull) snapViewController didPrepareDrawingView: (UIView*) drawingView {

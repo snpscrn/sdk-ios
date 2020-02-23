@@ -25,5 +25,13 @@ typedef NS_ENUM(NSInteger, SnapscreenErrorCode) {
     /// Web search resulted in no results
     SnapscreenWebSearchNoResults,
     /// No access token could be fetched
-    SnapscreenAccessTokenMissing
+    SnapscreenAccessTokenMissing,
+    /// Direct snap was attempted without providing SnapConfiguration
+    SnapscreenSnapperConfigurationMissing,
+    /// Direct snap failed because of an unknown error
+    SnapscreenSnapperUnknownError,
+    /// Direct snap was cancelled
+    SnapscreenSnapperCancelled
 };
+
+

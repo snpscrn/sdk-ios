@@ -125,6 +125,9 @@
                 <a class="nav-group-task-link" href="../Classes/SnapscreenSnapViewController.html">SnapscreenSnapViewController</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSnapper.html">SnapscreenSnapper</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/SnapscreenSportEvent.html">SnapscreenSportEvent</a>
               </li>
               <li class="nav-group-task">
@@ -196,6 +199,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/SnapscreenSnapViewControllerDelegate.html">SnapscreenSnapViewControllerDelegate</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenSnapperDelegate.html">SnapscreenSnapperDelegate</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -241,14 +247,15 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span>
-<span class="nf">sharedSnapscreenKitWithClientID</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">clientID</span>
-                   <span class="nf">clientSecret</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">clientSecret</span>
-                <span class="nf">testEnvironment</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">connectToTestEnvironment</span>
-                 <span class="nf">loggingHandler</span><span class="p">:</span>
-                     <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenLoggingHandler.html">SnapscreenLoggingHandler</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">loggingHandler</span>
-               <span class="nf">locationProvider</span><span class="p">:</span>
-                   <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenLocationProvider.html">SnapscreenLocationProvider</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">locationProvider</span>
-                       <span class="nf">delegate</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenKitDelegate.html">SnapscreenKitDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">delegate</span><span class="p">;</span></code></pre>
+    <span class="nf">sharedSnapscreenKitWithClientID</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">clientID</span>
+                       <span class="nf">clientSecret</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">clientSecret</span>
+                    <span class="nf">testEnvironment</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">connectToTestEnvironment</span>
+                     <span class="nf">loggingHandler</span><span class="p">:</span>
+                         <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenLoggingHandler.html">SnapscreenLoggingHandler</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">loggingHandler</span>
+                   <span class="nf">locationProvider</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenLocationProvider.html">SnapscreenLocationProvider</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span>
+                                        <span class="n"><a href="../Classes/SnapscreenKit.html#/c:objc(cs)SnapscreenKit(py)locationProvider">locationProvider</a></span>
+                           <span class="n"><a href="../Classes/SnapscreenKit.html#/c:objc(cs)SnapscreenKit(py)delegate">delegate</a></span><span class="o">:</span>
+                               <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenKitDelegate.html">SnapscreenKitDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="n"><a href="../Classes/SnapscreenKit.html#/c:objc(cs)SnapscreenKit(py)delegate">delegate</a></span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -342,6 +349,152 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)SnapscreenKit(cm)sharedSnapscreenKitWithClientID:clientSecret:testEnvironment:backendURL:clipsharingBackendURL:loggingHandler:locationProvider:delegate:"></a>
+                    <a name="//apple_ref/objc/Method/+sharedSnapscreenKitWithClientID:clientSecret:testEnvironment:backendURL:clipsharingBackendURL:loggingHandler:locationProvider:delegate:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenKit(cm)sharedSnapscreenKitWithClientID:clientSecret:testEnvironment:backendURL:clipsharingBackendURL:loggingHandler:locationProvider:delegate:">+sharedSnapscreenKitWithClientID:clientSecret:testEnvironment:backendURL:clipsharingBackendURL:loggingHandler:locationProvider:delegate:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize SnapscreenKit with custom backend URLs</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span>
+    <span class="nf">sharedSnapscreenKitWithClientID</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">clientID</span>
+                       <span class="nf">clientSecret</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">clientSecret</span>
+                    <span class="nf">testEnvironment</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">connectToTestEnvironment</span>
+                         <span class="nf">backendURL</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">backendURL</span>
+              <span class="nf">clipsharingBackendURL</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">clipsharingBackendURL</span>
+                     <span class="nf">loggingHandler</span><span class="p">:</span>
+                         <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenLoggingHandler.html">SnapscreenLoggingHandler</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">loggingHandler</span>
+                   <span class="nf">locationProvider</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenLocationProvider.html">SnapscreenLocationProvider</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span>
+                                        <span class="n"><a href="../Classes/SnapscreenKit.html#/c:objc(cs)SnapscreenKit(py)locationProvider">locationProvider</a></span>
+                           <span class="n"><a href="../Classes/SnapscreenKit.html#/c:objc(cs)SnapscreenKit(py)delegate">delegate</a></span><span class="o">:</span>
+                               <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenKitDelegate.html">SnapscreenKitDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="n"><a href="../Classes/SnapscreenKit.html#/c:objc(cs)SnapscreenKit(py)delegate">delegate</a></span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">sharedSnapscreenKit</span><span class="p">(</span><span class="n">withClientID</span> <span class="nv">clientID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">clientSecret</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">testEnvironment</span> <span class="nv">connectToTestEnvironment</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">backendURL</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">clipsharingBackendURL</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">loggingHandler</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SnapscreenLoggingHandler.html">SnapscreenLoggingHandler</a></span><span class="p">?,</span> <span class="nv">locationProvider</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SnapscreenLocationProvider.html">SnapscreenLocationProvider</a></span><span class="p">?,</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SnapscreenKitDelegate.html">SnapscreenKitDelegate</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clientID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The client ID of your application - provided by Snapscreen</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clientSecret</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The client secret of your application - provided by Snapscreen</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>connectToTestEnvironment</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether you want SnapscreenKit connect to the test environment of Snapscreen. Pass NO for production use in Release Builds.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>backendURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL string for the standard Snapscreen backend - if nil uses the default URL based on the environment</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clipsharingBackendURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL string for the Snapscreen clip sharing backend - if nil uses the default URL based on the environment</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>loggingHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An optional logging handler. Pass if you want to receive log messages from SnapscreenKit in your application and attach them to your custom logging solution. For logging to NSLog there is a default implementation in <code><a href="../Classes.html#/c:objc(cs)SnapscreenNSLogLoggingHandler">SnapscreenNSLogLoggingHandler</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>locationProvider</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An optional location provider. If your application determines the user&rsquo;s location in some way, provide this and SnapscreenKit will also use the user&rsquo;s location to improve result quality.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delegate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The SnapscreenKit delegate</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)SnapscreenKit(cm)sharedSnapscreenKitWithClientID:clientSecret:testEnvironment:loggingHandler:locationProvider:delegate:customTokenHandling:"></a>
                     <a name="//apple_ref/objc/Method/+sharedSnapscreenKitWithClientID:clientSecret:testEnvironment:loggingHandler:locationProvider:delegate:customTokenHandling:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)SnapscreenKit(cm)sharedSnapscreenKitWithClientID:clientSecret:testEnvironment:loggingHandler:locationProvider:delegate:customTokenHandling:">+sharedSnapscreenKitWithClientID:clientSecret:testEnvironment:loggingHandler:locationProvider:delegate:customTokenHandling:</a>
@@ -360,15 +513,16 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span>
-<span class="nf">sharedSnapscreenKitWithClientID</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">clientID</span>
-                   <span class="nf">clientSecret</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">clientSecret</span>
-                <span class="nf">testEnvironment</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">connectToTestEnvironment</span>
-                 <span class="nf">loggingHandler</span><span class="p">:</span>
-                     <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenLoggingHandler.html">SnapscreenLoggingHandler</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">loggingHandler</span>
-               <span class="nf">locationProvider</span><span class="p">:</span>
-                   <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenLocationProvider.html">SnapscreenLocationProvider</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">locationProvider</span>
-                       <span class="nf">delegate</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenKitDelegate.html">SnapscreenKitDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">delegate</span>
-            <span class="nf">customTokenHandling</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">customTokenHandling</span><span class="p">;</span></code></pre>
+    <span class="nf">sharedSnapscreenKitWithClientID</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">clientID</span>
+                       <span class="nf">clientSecret</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">clientSecret</span>
+                    <span class="nf">testEnvironment</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">connectToTestEnvironment</span>
+                     <span class="nf">loggingHandler</span><span class="p">:</span>
+                         <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenLoggingHandler.html">SnapscreenLoggingHandler</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">loggingHandler</span>
+                   <span class="nf">locationProvider</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenLocationProvider.html">SnapscreenLocationProvider</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span>
+                                        <span class="n"><a href="../Classes/SnapscreenKit.html#/c:objc(cs)SnapscreenKit(py)locationProvider">locationProvider</a></span>
+                           <span class="n"><a href="../Classes/SnapscreenKit.html#/c:objc(cs)SnapscreenKit(py)delegate">delegate</a></span><span class="o">:</span>
+                               <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenKitDelegate.html">SnapscreenKitDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="n"><a href="../Classes/SnapscreenKit.html#/c:objc(cs)SnapscreenKit(py)delegate">delegate</a></span>
+                <span class="n">customTokenHandling</span><span class="o">:</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">customTokenHandling</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -798,6 +952,38 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)SnapscreenKit(py)snapper"></a>
+                    <a name="//apple_ref/objc/Property/snapper" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)SnapscreenKit(py)snapper">snapper</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Snapper to access a direct snapping and quadrangle detection API.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="../Classes/SnapscreenSnapper.html">SnapscreenSnapper</a></span> <span class="o">*</span><span class="n">snapper</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">snapper</span><span class="p">:</span> <span class="kt"><a href="../Classes/SnapscreenSnapper.html">SnapscreenSnapper</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)SnapscreenKit(im)instantiateSnapscreenSnapViewControllerWithDelegate:resultsDelegate:configuration:"></a>
                     <a name="//apple_ref/objc/Method/-instantiateSnapscreenSnapViewControllerWithDelegate:resultsDelegate:configuration:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)SnapscreenKit(im)instantiateSnapscreenSnapViewControllerWithDelegate:resultsDelegate:configuration:">-instantiateSnapscreenSnapViewControllerWithDelegate:resultsDelegate:configuration:</a>
@@ -816,14 +1002,14 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/SnapscreenSnapViewController.html">SnapscreenSnapViewController</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span>
-<span class="nf">instantiateSnapscreenSnapViewControllerWithDelegate</span><span class="p">:</span>
-    <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenSnapViewControllerDelegate.html">SnapscreenSnapViewControllerDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">delegate</span>
-                                    <span class="nf">resultsDelegate</span><span class="p">:</span>
-                                        <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenSnapResultsViewControllerDelegate.html">SnapscreenSnapResultsViewControllerDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span>
-                                            <span class="n">resultsDelegate</span>
-                                      <span class="n">configuration</span><span class="o">:</span>
-                                          <span class="p">(</span><span class="n"><a href="../Classes/SnapscreenSnapConfiguration.html">SnapscreenSnapConfiguration</a></span>
-                                               <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="n">snapConfiguration</span><span class="p">;</span></code></pre>
+    <span class="nf">instantiateSnapscreenSnapViewControllerWithDelegate</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenSnapViewControllerDelegate.html">SnapscreenSnapViewControllerDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">delegate</span>
+                                        <span class="nf">resultsDelegate</span><span class="p">:</span>
+                                            <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenSnapResultsViewControllerDelegate.html">SnapscreenSnapResultsViewControllerDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span>
+                                                <span class="n">resultsDelegate</span>
+                                          <span class="n">configuration</span><span class="o">:</span>
+                                              <span class="p">(</span><span class="n"><a href="../Classes/SnapscreenSnapConfiguration.html">SnapscreenSnapConfiguration</a></span>
+                                                   <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="n">snapConfiguration</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -903,11 +1089,12 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/SnapscreenARSnapViewController.html">SnapscreenARSnapViewController</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span>
-<span class="nf">instantiateARSnapscreenSnapViewControllerWithDelegate</span><span class="p">:</span>
-    <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenARSnapViewControllerDelegate.html">SnapscreenARSnapViewControllerDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">delegate</span>
-                                        <span class="nf">configuration</span><span class="p">:</span>
-                                            <span class="p">(</span><span class="n"><a href="../Classes/SnapscreenSnapConfiguration.html">SnapscreenSnapConfiguration</a></span>
-                                                 <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="n">snapConfiguration</span><span class="p">;</span></code></pre>
+    <span class="nf">instantiateARSnapscreenSnapViewControllerWithDelegate</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SnapscreenARSnapViewControllerDelegate.html">SnapscreenARSnapViewControllerDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">delegate</span>
+                                            <span class="nf">configuration</span><span class="p">:</span>
+                                                <span class="p">(</span><span class="n"><a href="../Classes/SnapscreenSnapConfiguration.html">SnapscreenSnapConfiguration</a></span>
+                                                     <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span>
+                                                    <span class="n">snapConfiguration</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -962,7 +1149,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2019-01-29)</p>
+      <p>&copy; 2020 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2020-02-23)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

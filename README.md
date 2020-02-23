@@ -181,7 +181,13 @@ SnapscreenClipSharingNavigationController* sharingNavigationController = [[Snaps
 
 The ViewController will send callbacks to the delegate you pass and you are responsible for dismissing the ViewController once it's no longer needed. The ViewController does not dismiss itself in any situation. The **SnapscreenClipShareInformation** you receive from the delegate callback will have the necessary information about the clip a user wants to share.
 
+
+### Letting SnapscreenKit know about the result of the sharing operation
+
+*Important:* Depending on how the user completes the sharing process that you present, call the Methods [SnapscreenClipSharingViewController didCancelSharing] or [SnapscreenClipSharingViewController didShareTo: <platform>] to let SnapscreenKit know about the result.
+
 The tutorial is shown the first time the users opens clip sharing. After that first time, the user defaults value with the key SnapscreenSDK_ClipSharingTutorialSeenUserDefaultsKey (value "SnapscreenSDK_ClipSharing_Tutorial_Seen") is set to true to indicate that the user has seen the tutorial and it should not be shown again. You can explicitly set this user defaults value on your own to control if the tutorial should be shown or not.
+
 
 ### Asset guidelines
 
@@ -194,6 +200,25 @@ We recommend the following minimum heights for the images that can be provided. 
 * tutorialBackgroundImage: iPhone height
 * sharingIntroductionHintImage: 50px
 * tutorialContent Images: at least 400px
+
+
+## Integrating with ARKit
+
+The SDK also provides the ability to integrate snapping and quadrangle detection with your own custom UI. To do so, you can use the SnapscreenSnapper which is provided through the class SnapscreenKit. You need to provide a SnapscreenSnapConfiguration to determine which results you are interested in and set the delegate property to your implementation of a SnapscreenSnapperDelegate.
+
+We recommend that you only perform snaps when the user explicitly triggers it via a button or at certain intervals to save memory and CPU time on the user's device.
+
+Most likely you will want to integrate directly with the callbacks provided from the ARSession:
+
+```
+- (void)session:(ARSession *)session didUpdateFrame:(ARFrame *)frame {
+    if (shouldPerformSnap) {
+      [[SnapscreenKit sharedSnapscreenKit].snapper performSnapForPixelBuffer: frame.capturedImage timestamp: frame.timestamp];
+    }
+}
+```
+
+See ARKitDemoViewController in the demo project for an integration sample.
 
 ## Support
 

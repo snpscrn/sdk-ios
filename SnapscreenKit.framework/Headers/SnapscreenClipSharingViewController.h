@@ -56,6 +56,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype) initWithConfiguration: (SnapscreenClipSharingConfiguration*) configuration delegate: (id<SnapscreenClipSharingDelegate>) delegate;
 
+/**
+ Call this method to let the ClipSharingViewController know that sharing of the clip was cancelled by the user
+ */
++ (void) didCancelSharing;
+
+/**
+ Call this method to let the ClipSharingViewController know that the clip was shared by the user, if possible passing the name of the platform (capitalized first letter, e.g. Facebook)
+ */
++ (void) didShareTo: (NSString* _Nullable) platform;
+
 @end
 
 NS_ASSUME_NONNULL_END
