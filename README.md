@@ -143,10 +143,6 @@ The SnapscreenSnapViewController will send callbacks to the delegate you pass an
 
 When snapping returns more than a single snap result and the user has multiple results to choose from, the **SnapscreenSnapResultsViewController** is automatically pushed onto the navigation stack. You can pass an optional resultsDelegate when instantiating the SnapViewController (see above) that implements the **SnapscreenSnapResultsViewControllerDelegate** protocol to control and customize how the results are displayed. This is optional and SnapscreenKit provides a default implementation. The **SnapscreenSnapResultsViewControllerDelegate** provides you with a callback that delivers the result entry that the user selected.
 
-## Localization
-
-If you want, you can customize several messages that are shown in the UI by overriding the Localization keys defined in SnapscreenKit.bundle in your own Localizable.strings files.
-
 ## Customizing Appearance
 
 The SnapscreenSnapViewController supports customization of the following properties:
@@ -201,6 +197,11 @@ We recommend the following minimum heights for the images that can be provided. 
 * sharingIntroductionHintImage: 50px
 * tutorialContent Images: at least 400px
 
+### Modifying Localizations
+
+In order to modify any text used within SnapscreenKit, simply define the appropriate strings in Localizable.strings files in your project. Please note that SnapscreenKit provides localizations for German, English and Russian.
+
+See [https://github.com/snpscrn/sdk-ios/tree/master/SnapscreenKit.bundle](https://github.com/snpscrn/sdk-ios/tree/master/SnapscreenKit.bundle) for the defined localization keys.
 
 ## Integrating with ARKit
 

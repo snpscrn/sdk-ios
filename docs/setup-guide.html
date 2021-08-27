@@ -363,6 +363,15 @@ SnapscreenClipSharingNavigationController* sharingNavigationController = [[Snaps
 <li>sharingIntroductionHintImage: 50px</li>
 <li>tutorialContent Images: at least 400px</li>
 </ul>
+
+<h3 id='modifying-localizations' class='heading'>Modifying Localizations</h3>
+<p>
+In order to modify any text used within SnapscreenKit, simply define the appropriate strings in Localizable.strings files in your project. Please note that SnapscreenKit provides localizations for German, English and Russian.<br/>
+<br/>
+See <a href="https://github.com/snpscrn/sdk-ios/tree/master/SnapscreenKit.bundle">https://github.com/snpscrn/sdk-ios/tree/master/SnapscreenKit.bundle</a> for the defined localization keys.
+</p>
+
+
 <h2 id='integrating-with-arkit' class='heading'>Integrating with ARKit</h2>
 
 <p>The SDK also provides the ability to integrate snapping and quadrangle detection with your own custom UI. To do so, you can use the SnapscreenSnapper which is provided through the class SnapscreenKit. You need to provide a SnapscreenSnapConfiguration to determine which results you are interested in and set the delegate property to your implementation of a SnapscreenSnapperDelegate.</p>
