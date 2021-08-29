@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SnapscreenClipSnapViewControllerDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/objc/Protocol/SnapscreenClipSnapViewControllerDelegate" class="dashAnchor"></a>
+
+    <a title="SnapscreenClipSnapViewControllerDelegate Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          SnapscreenKit Docs
+        </a>
+         (89% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">SnapscreenKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      SnapscreenClipSnapViewControllerDelegate Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../setup-guide.html">Setup Guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenARSnapViewController.html">SnapscreenARSnapViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenAccessToken.html">SnapscreenAccessToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenAccessTokenHolder.html">SnapscreenAccessTokenHolder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenAdvertisement.html">SnapscreenAdvertisement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenAdvertisementSearchResult.html">SnapscreenAdvertisementSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenAdvertisementSearchResultEntry.html">SnapscreenAdvertisementSearchResultEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenClipShareInformation.html">SnapscreenClipShareInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenClipSharingConfiguration.html">SnapscreenClipSharingConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenClipSharingNavigationController.html">SnapscreenClipSharingNavigationController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenClipSharingTutorialContent.html">SnapscreenClipSharingTutorialContent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenClipSharingViewController.html">SnapscreenClipSharingViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenClipSnapViewController.html">SnapscreenClipSnapViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenCustomerConfiguration.html">SnapscreenCustomerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenEpgUnit.html">SnapscreenEpgUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenEpgUnitCredits.html">SnapscreenEpgUnitCredits</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenEpgUnitPerson.html">SnapscreenEpgUnitPerson</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenKit.html">SnapscreenKit</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)SnapscreenNSLogLoggingHandler">SnapscreenNSLogLoggingHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenResultQuadrangle.html">SnapscreenResultQuadrangle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSearchResult.html">SnapscreenSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)SnapscreenSearchResultEntry">SnapscreenSearchResultEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSnapConfiguration.html">SnapscreenSnapConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)SnapscreenSnapResultsViewController">SnapscreenSnapResultsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSnapViewController.html">SnapscreenSnapViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSnapper.html">SnapscreenSnapper</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSportEvent.html">SnapscreenSportEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSportEventCompetitor.html">SnapscreenSportEventCompetitor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSportEventSearchResult.html">SnapscreenSportEventSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenSportEventSearchResultEntry.html">SnapscreenSportEventSearchResultEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenTvChannel.html">SnapscreenTvChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenTvSearchResult.html">SnapscreenTvSearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SnapscreenTvSearchResultEntry.html">SnapscreenTvSearchResultEntry</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SnapscreenKitVersionNumber">SnapscreenKitVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SnapscreenKitVersionString">SnapscreenKitVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SnapscreenARViewFinderMode.html">SnapscreenARViewFinderMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SnapscreenClipSnapStatus.html">SnapscreenClipSnapStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SnapscreenErrorCode.html">SnapscreenErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SnapscreenSearchType.html">SnapscreenSearchType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SnapscreenTrackingEvent.html">SnapscreenTrackingEvent</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenARSnapViewControllerDelegate.html">SnapscreenARSnapViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenClipSharingDelegate.html">SnapscreenClipSharingDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenClipSnapViewControllerDelegate.html">SnapscreenClipSnapViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenKitDelegate.html">SnapscreenKitDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenKitTrackingDelegate.html">SnapscreenKitTrackingDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenLocationProvider.html">SnapscreenLocationProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenLoggingHandler.html">SnapscreenLoggingHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenSnapResultsViewControllerDelegate.html">SnapscreenSnapResultsViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenSnapViewControllerDelegate.html">SnapscreenSnapViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SnapscreenSnapperDelegate.html">SnapscreenSnapperDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>SnapscreenClipSnapViewControllerDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SnapscreenClipSnapViewControllerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>Delegate to let the user of the SnapViewController know if manual snapping should be enabled</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SnapscreenClipSnapViewControllerDelegate(im)clipSnapViewController:shouldSetManualSnapButtonEnabled:"></a>
+                    <a name="//apple_ref/objc/Method/-clipSnapViewController:shouldSetManualSnapButtonEnabled:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SnapscreenClipSnapViewControllerDelegate(im)clipSnapViewController:shouldSetManualSnapButtonEnabled:">-clipSnapViewController:shouldSetManualSnapButtonEnabled:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Informs the delegate about whether a manual snap button should be enabled or not</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">clipSnapViewController</span><span class="p">:</span>
+            <span class="p">(</span><span class="n"><a href="../Classes/SnapscreenClipSnapViewController.html">SnapscreenClipSnapViewController</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">clipSnapViewController</span>
+    <span class="nf">shouldSetManualSnapButtonEnabled</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">enabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">clipSnapViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">clipSnapViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/SnapscreenClipSnapViewController.html">SnapscreenClipSnapViewController</a></span><span class="o">!</span><span class="p">,</span> <span class="n">shouldSetManualSnapButtonEnabled</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SnapscreenClipSnapViewControllerDelegate(im)clipSnapViewController:didSnapResultEntry:"></a>
+                    <a name="//apple_ref/objc/Method/-clipSnapViewController:didSnapResultEntry:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SnapscreenClipSnapViewControllerDelegate(im)clipSnapViewController:didSnapResultEntry:">-clipSnapViewController:didSnapResultEntry:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Informs the delegate that a snap result was captured</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">clipSnapViewController</span><span class="p">:</span>
+            <span class="p">(</span><span class="n"><a href="../Classes/SnapscreenClipSnapViewController.html">SnapscreenClipSnapViewController</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">clipSnapViewController</span>
+            <span class="nf">didSnapResultEntry</span><span class="p">:(</span><span class="n"><a href="../Classes/SnapscreenTvSearchResultEntry.html">SnapscreenTvSearchResultEntry</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">snapResultEntry</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">clipSnapViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">clipSnapViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/SnapscreenClipSnapViewController.html">SnapscreenClipSnapViewController</a></span><span class="o">!</span><span class="p">,</span> <span class="n">didSnapResultEntry</span> <span class="nv">snapResultEntry</span><span class="p">:</span> <span class="kt"><a href="../Classes/SnapscreenTvSearchResultEntry.html">SnapscreenTvSearchResultEntry</a></span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SnapscreenClipSnapViewControllerDelegate(im)clipSnapViewController:didResizeViewFinderToSize:"></a>
+                    <a name="//apple_ref/objc/Method/-clipSnapViewController:didResizeViewFinderToSize:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SnapscreenClipSnapViewControllerDelegate(im)clipSnapViewController:didResizeViewFinderToSize:">-clipSnapViewController:didResizeViewFinderToSize:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Informs the delegate about a change of the viewfinder size. The viewfinder is always positioned in the center of the full view.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">clipSnapViewController</span><span class="p">:</span>
+            <span class="p">(</span><span class="n"><a href="../Classes/SnapscreenClipSnapViewController.html">SnapscreenClipSnapViewController</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">clipSnapViewController</span>
+     <span class="nf">didResizeViewFinderToSize</span><span class="p">:(</span><span class="n">CGSize</span><span class="p">)</span><span class="nv">viewFinderSize</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">clipSnapViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">clipSnapViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/SnapscreenClipSnapViewController.html">SnapscreenClipSnapViewController</a></span><span class="o">!</span><span class="p">,</span> <span class="n">didResizeViewFinderToSize</span> <span class="nv">viewFinderSize</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SnapscreenClipSnapViewControllerDelegate(im)clipSnapViewControllerDidStartImageCapture:"></a>
+                    <a name="//apple_ref/objc/Method/-clipSnapViewControllerDidStartImageCapture:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SnapscreenClipSnapViewControllerDelegate(im)clipSnapViewControllerDidStartImageCapture:">-clipSnapViewControllerDidStartImageCapture:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Informs the delegate when the setup of the snap view is complete and camera capture has started. Also called when the camera feed is restarted, e.g. after the application got inactive or the user navigated away from the viewcontroller and back again.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">clipSnapViewControllerDidStartImageCapture</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Classes/SnapscreenClipSnapViewController.html">SnapscreenClipSnapViewController</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">clipSnapViewController</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">clipSnapViewControllerDidStartImageCapture</span><span class="p">(</span><span class="n">_</span> <span class="nv">clipSnapViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/SnapscreenClipSnapViewController.html">SnapscreenClipSnapViewController</a></span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SnapscreenClipSnapViewControllerDelegate(im)clipSnapViewControllerDidStopImageCapture:"></a>
+                    <a name="//apple_ref/objc/Method/-clipSnapViewControllerDidStopImageCapture:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SnapscreenClipSnapViewControllerDelegate(im)clipSnapViewControllerDidStopImageCapture:">-clipSnapViewControllerDidStopImageCapture:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Informs the delegate that camera capture has stopped</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">clipSnapViewControllerDidStopImageCapture</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Classes/SnapscreenClipSnapViewController.html">SnapscreenClipSnapViewController</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">clipSnapViewController</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">clipSnapViewControllerDidStopImageCapture</span><span class="p">(</span><span class="n">_</span> <span class="nv">clipSnapViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/SnapscreenClipSnapViewController.html">SnapscreenClipSnapViewController</a></span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SnapscreenClipSnapViewControllerDelegate(im)clipSnapViewControllerShouldShowStandardStatusUpdates:"></a>
+                    <a name="//apple_ref/objc/Method/-clipSnapViewControllerShouldShowStandardStatusUpdates:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SnapscreenClipSnapViewControllerDelegate(im)clipSnapViewControllerShouldShowStandardStatusUpdates:">-clipSnapViewControllerShouldShowStandardStatusUpdates:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asks the delegate whether standard status updates should be shown - including progress and error messages. Defaults to YES if not implemented.
+If the delegate returns NO, the delegate should respond to the clipSnapViewController:showStatus: callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">clipSnapViewControllerShouldShowStandardStatusUpdates</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Classes/SnapscreenClipSnapViewController.html">SnapscreenClipSnapViewController</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">clipSnapViewController</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">clipSnapViewControllerShouldShowStandardStatusUpdates</span><span class="p">(</span><span class="n">_</span> <span class="nv">clipSnapViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/SnapscreenClipSnapViewController.html">SnapscreenClipSnapViewController</a></span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SnapscreenClipSnapViewControllerDelegate(im)clipSnapViewController:didUpdateStatus:"></a>
+                    <a name="//apple_ref/objc/Method/-clipSnapViewController:didUpdateStatus:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SnapscreenClipSnapViewControllerDelegate(im)clipSnapViewController:didUpdateStatus:">-clipSnapViewController:didUpdateStatus:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Informs the delegate that a certain status update should be shown</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">clipSnapViewController</span><span class="p">:</span>
+            <span class="p">(</span><span class="n"><a href="../Classes/SnapscreenClipSnapViewController.html">SnapscreenClipSnapViewController</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">clipSnapViewController</span>
+               <span class="nf">didUpdateStatus</span><span class="p">:(</span><span class="n"><a href="../Enums/SnapscreenClipSnapStatus.html">SnapscreenClipSnapStatus</a></span><span class="p">)</span><span class="nv">status</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">clipSnapViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">clipSnapViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/SnapscreenClipSnapViewController.html">SnapscreenClipSnapViewController</a></span><span class="o">!</span><span class="p">,</span> <span class="n">didUpdateStatus</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2021 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2021-08-28)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

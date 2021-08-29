@@ -23,7 +23,7 @@
         <a class="header-link" href="index.html">
           SnapscreenKit Docs
         </a>
-         (100% documented)
+         (89% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -87,6 +87,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/SnapscreenClipSharingViewController.html">SnapscreenClipSharingViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SnapscreenClipSnapViewController.html">SnapscreenClipSnapViewController</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/SnapscreenCustomerConfiguration.html">SnapscreenCustomerConfiguration</a>
@@ -168,10 +171,16 @@
                 <a class="nav-group-task-link" href="Enums/SnapscreenARViewFinderMode.html">SnapscreenARViewFinderMode</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SnapscreenClipSnapStatus.html">SnapscreenClipSnapStatus</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/SnapscreenErrorCode.html">SnapscreenErrorCode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/SnapscreenSearchType.html">SnapscreenSearchType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SnapscreenTrackingEvent.html">SnapscreenTrackingEvent</a>
               </li>
             </ul>
           </li>
@@ -185,7 +194,13 @@
                 <a class="nav-group-task-link" href="Protocols/SnapscreenClipSharingDelegate.html">SnapscreenClipSharingDelegate</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SnapscreenClipSnapViewControllerDelegate.html">SnapscreenClipSnapViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/SnapscreenKitDelegate.html">SnapscreenKitDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SnapscreenKitTrackingDelegate.html">SnapscreenKitTrackingDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/SnapscreenLocationProvider.html">SnapscreenLocationProvider</a>
@@ -292,6 +307,38 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:@E@SnapscreenClipSnapStatus"></a>
+                    <a name="//apple_ref/objc/Enum/SnapscreenClipSnapStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SnapscreenClipSnapStatus">SnapscreenClipSnapStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enum for the status update events sent to the SnapscreenClipSnapViewControllerDelegate</p>
+
+                        <a href="Enums/SnapscreenClipSnapStatus.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">SnapscreenClipSnapStatus</span> <span class="p">{}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:@E@SnapscreenARViewFinderMode"></a>
                     <a name="//apple_ref/objc/Enum/SnapscreenARViewFinderMode" class="dashAnchor"></a>
                     <a class="token" href="#/c:@E@SnapscreenARViewFinderMode">SnapscreenARViewFinderMode</a>
@@ -319,13 +366,45 @@
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SnapscreenTrackingEvent"></a>
+                    <a name="//apple_ref/objc/Enum/SnapscreenTrackingEvent" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SnapscreenTrackingEvent">SnapscreenTrackingEvent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enum for tracking events sent by the SDK to a SnapscreenKitTrackingDelegate</p>
+
+                        <a href="Enums/SnapscreenTrackingEvent.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">SnapscreenTrackingEvent</span> <span class="p">{}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2020-02-23)</p>
+      <p>&copy; 2021 <a class="link" href="https://snapscreen.com" target="_blank" rel="external">Snapscreen</a>. All rights reserved. (Last updated: 2021-08-28)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

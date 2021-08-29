@@ -82,6 +82,18 @@ NS_ASSUME_NONNULL_BEGIN
 /** Maximum Height constraint that is applied to the small sponsor image on the trimming page - defaults to -1 which means that the full image height is used */
 @property (nonatomic, assign) CGFloat maximumSmallSponsorImageHeight;
 
+/** Perform automatic snapping. Defaults to true */
+@property (nonatomic, assign) BOOL automaticSnap;
+
+/** The minimum interval between automatic snap attempts in seconds; Defaults to 0.5 */
+@property (nonatomic, assign) NSTimeInterval autosnapIntervalInSeconds;
+
+/** The time interval after which automatic snapping stops when no results are found; Defaults to 30 seconds */
+@property (nonatomic, assign) NSTimeInterval autosnapTimeoutDuration;
+
+/** Perform quadrangle detection and highlighting. Defaults to YES */
+@property (nonatomic, assign) BOOL quadrangleDetection;
+
 @end
 
 NS_ASSUME_NONNULL_END

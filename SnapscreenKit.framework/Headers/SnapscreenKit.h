@@ -38,6 +38,7 @@
 #import "SnapscreenClipShareInformation.h"
 #import "SnapscreenClipSharingTutorialContent.h"
 #import "SnapscreenClipSharingNavigationController.h"
+#import "SnapscreenClipSnapViewController+Public.h"
 
 #import "SnapscreenAccessToken.h"
 #import "SnapscreenAccessTokenHolder.h"
@@ -52,6 +53,7 @@
 #import "SnapscreenSearchType.h"
 
 #import "SnapscreenKitDelegate.h"
+#import "SnapscreenKitTrackingDelegate.h"
 
 /** Project version number for SnapscreenKit. */
 FOUNDATION_EXPORT double SnapscreenKitVersionNumber;
@@ -90,7 +92,22 @@ SnapscreenKit offers integration of the Snapscreen functions in your app. Before
  @param loggingHandler An optional logging handler. Pass if you want to receive log messages from SnapscreenKit in your application and attach them to your custom logging solution. For logging to NSLog there is a default implementation in `SnapscreenNSLogLoggingHandler`
  @param locationProvider An optional location provider. If your application determines the user's location in some way, provide this and SnapscreenKit will also use the user's location to improve result quality.
  @param delegate The SnapscreenKit delegate
+ @param trackingDelegate An optional tracking delegate to receive events from the SDK
  
+ */
++ (instancetype _Nonnull) sharedSnapscreenKitWithClientID: (NSString* _Nonnull) clientID clientSecret: (NSString* _Nonnull) clientSecret testEnvironment: (BOOL) connectToTestEnvironment backendURL: (NSString* _Nullable) backendURL clipsharingBackendURL: (NSString* _Nullable) clipsharingBackendURL loggingHandler: (id<SnapscreenLoggingHandler> _Nullable) loggingHandler locationProvider: (id<SnapscreenLocationProvider> _Nullable) locationProvider delegate: (id<SnapscreenKitDelegate> _Nullable) delegate trackingDelegate: (id<SnapscreenKitTrackingDelegate> _Nullable) trackingDelegate;
+
+/** Initialize SnapscreenKit with custom backend URLs
+
+ @param clientID The client ID of your application - provided by Snapscreen
+ @param clientSecret The client secret of your application - provided by Snapscreen
+ @param connectToTestEnvironment Whether you want SnapscreenKit connect to the test environment of Snapscreen. Pass NO for production use in Release Builds.
+ @param backendURL The URL string for the standard Snapscreen backend - if nil uses the default URL based on the environment
+ @param clipsharingBackendURL The URL string for the Snapscreen clip sharing backend - if nil uses the default URL based on the environment
+ @param loggingHandler An optional logging handler. Pass if you want to receive log messages from SnapscreenKit in your application and attach them to your custom logging solution. For logging to NSLog there is a default implementation in `SnapscreenNSLogLoggingHandler`
+ @param locationProvider An optional location provider. If your application determines the user's location in some way, provide this and SnapscreenKit will also use the user's location to improve result quality.
+ @param delegate The SnapscreenKit delegate
+
  */
 + (instancetype _Nonnull) sharedSnapscreenKitWithClientID: (NSString* _Nonnull) clientID clientSecret: (NSString* _Nonnull) clientSecret testEnvironment: (BOOL) connectToTestEnvironment backendURL: (NSString* _Nullable) backendURL clipsharingBackendURL: (NSString* _Nullable) clipsharingBackendURL loggingHandler: (id<SnapscreenLoggingHandler> _Nullable) loggingHandler locationProvider: (id<SnapscreenLocationProvider> _Nullable) locationProvider delegate: (id<SnapscreenKitDelegate> _Nullable) delegate;
 
@@ -156,6 +173,13 @@ SnapscreenKit offers integration of the Snapscreen functions in your app. Before
  
  */
 @property (nonatomic, strong, nullable) id<SnapscreenLocationProvider> locationProvider;
+
+/**
+
+ Holds an optional delegate that can receive various trackable events from the SDK
+
+ */
+@property (nonatomic, weak, nullable) id<SnapscreenKitTrackingDelegate> trackingDelegate;
 
 /**
  

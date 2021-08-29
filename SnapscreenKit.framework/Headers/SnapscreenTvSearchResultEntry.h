@@ -22,7 +22,7 @@
 @property (readonly, nonatomic, nonnull) SnapscreenTvChannel* channel;
 
 /** Optional resolved EPG unit that is currently playing on this channel */
-@property (readonly, nonatomic, nonnull) SnapscreenEpgUnit* epgUnit;
+@property (readonly, nonatomic, nullable) SnapscreenEpgUnit* epgUnit;
 
 /** The unix timestamp (milliseconds since 1.1.1970) that represents the recognized frame */
 @property (readonly, nonatomic) long long timestamp;

@@ -1,6 +1,222 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/Sharing/Snapping/SnapscreenClipSnapViewController+Public.h",
+      "line": 16,
+      "symbol": "SnapscreenClipSnapStatus.SnapscreenClipSnapStatusSnapDetectingTV",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/Sharing/Snapping/SnapscreenClipSnapViewController+Public.h",
+      "line": 17,
+      "symbol": "SnapscreenClipSnapStatus.SnapscreenClipSnapStatusSnapCalculatingFingerprint",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/Sharing/Snapping/SnapscreenClipSnapViewController+Public.h",
+      "line": 18,
+      "symbol": "SnapscreenClipSnapStatus.SnapscreenClipSnapStatusSnapSendingFingerprint",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/Sharing/Snapping/SnapscreenClipSnapViewController+Public.h",
+      "line": 19,
+      "symbol": "SnapscreenClipSnapStatus.SnapscreenClipSnapStatusSnapWaitingForResponse",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/Sharing/Snapping/SnapscreenClipSnapViewController+Public.h",
+      "line": 20,
+      "symbol": "SnapscreenClipSnapStatus.SnapscreenClipSnapStatusSnapError",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/Sharing/Snapping/SnapscreenClipSnapViewController+Public.h",
+      "line": 21,
+      "symbol": "SnapscreenClipSnapStatus.SnapscreenClipSnapStatusSnapNoResults",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 19,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventInit",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 20,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventTokenAcquired",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 21,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventTokenAcquisitionFailed",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 22,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventSnapViewOpen",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 23,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventSnapViewClose",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 24,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventSnapViewSnap",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 25,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventSnapViewSnapResult",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 26,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventSnapViewSnapNegative",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 27,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventSnapViewSnapFail",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 28,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventClipShareOpen",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 29,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventClipShareNotFound",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 30,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventClipShareOpenFail",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 31,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventClipSharePreviewPlay",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 32,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventClipSharePreviewClose",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 33,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventClipShareCreate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 34,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventClipShareCreated",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 35,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventClipShareCreateFail",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 36,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventClipShareShare",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 37,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventClipShareShared",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 38,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventClipShareSharedTo",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 39,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventClipShareCancel",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 40,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventClipShareClose",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 41,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventAskForCameraPermission",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 42,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventAskForCameraPermissionGranted",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous/docgen/SnapscreenKit/SnapscreenKitTrackingDelegate.h",
+      "line": 43,
+      "symbol": "SnapscreenTrackingEvent.SnapscreenTrackingEventAskForCameraPermissionDenied",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    }
   ],
-  "source_directory": "/Users/developer/jenkins/workspace/iOS SDK - continuous"
+  "source_directory": "/Users/developer/jenkins/workspace/iOS apps/iOS SDK - continuous"
 }
